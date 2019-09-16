@@ -12,6 +12,8 @@ which can be included in Stripes modules by means of a `<Pluggable type="find-im
 See [the *Plugins* section](https://github.com/folio-org/stripes-core/blob/master/doc/dev-guide.md#plugins)
 of the Module Developer's Guide.
 
+This package covers search and pick functionality for all the Data Import Profile types using single general plugin component.
+
 ## Additional information
 
 Other [modules](https://dev.folio.org/source-code/#client-side).

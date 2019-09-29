@@ -1,0 +1,61 @@
+{
+  "name": "@folio/plugin-find-import-profile",
+  "version": "0.0.1",
+  "description": "Find and select Data Import Profiles plugin for Stripes",
+  "repository": "folio-org/ui-plugin-find-import-profile",
+  "publishConfig": {
+    "registry": "https://repository.folio.org/repository/npm-folio/"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=8.9.4"
+  },
+  "stripes": {
+    "actsAs": ["plugin"],
+    "pluginType": "find-import-profile",
+    "okapiInterfaces": {
+      "data-import": "3.0",
+      "source-record-manager": "2.0",
+      "data-import-converter-storage": "1.0"
+    },
+    "displayName": "ui-plugin-find-import-profile.meta.pluginTitle"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "stripes test karma"
+  },
+  "devDependencies": {
+    "@bigtest/interactor": "^0.9.1",
+    "@bigtest/mirage": "^0.0.1",
+    "@bigtest/mocha": "^0.5.2",
+    "@bigtest/react": "^0.1.2",
+    "@folio/eslint-config-stripes": "^4.1.0",
+    "@folio/stripes": "^2.7.0",
+    "@folio/stripes-cli": "^1.13.0",
+    "@folio/stripes-core": "^3.3.0",
+    "babel-eslint": "^9.0.0",
+    "babel-polyfill": "^6.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.5.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-no-only-tests": "^2.3.1",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "mocha": "^5.2.0",
+    "query-string": "^5.0.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "sinon": "^7.2.2"
+  },
+  "dependencies": {
+    "@folio/data-import": "^1.5.0",
+    "classnames": "^2.2.5",
+    "lodash": "^4.16.4",
+    "prop-types": "^15.6.0",
+    "react-highlighter": "^0.4.3",
+    "react-intl": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@folio/stripes": "^2.7.0",
+    "react": "*"
+  }
+}

@@ -1,3 +1,18 @@
 {
+  "meta.title": "{profileType}",
 
+  "addProfile": "Add {profileType}",
+
+  "pluggable.caption": "Pick Profile",
+  "pluggable.errors.plugin.disabled": "No plugin available!",
+
+  "modal.title": "Select {profileType}",
+  "modal.footer.save": "Save",
+  "modal.footer.close": "Close",
+  "modal.footer.totalSelected": "Total selected: {count}",
+
+  "entities.jobProfiles": "Job Profiles",
+  "entities.matchProfiles": "Match Profiles",
+  "entities.actionProfiles": "Action Profiles",
+  "entities.mappingProfiles": "Field Mapping Profiles"
 }

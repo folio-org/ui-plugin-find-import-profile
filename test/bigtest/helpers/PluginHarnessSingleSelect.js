@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import noop from 'lodash/noop';
 
 import { Pluggable } from '@folio/stripes/core';
+import { ENTITY_KEYS } from '@folio/data-import/src/utils/constants';
 
 const PluginHarnessSingleSelect = props => (
   <Pluggable
@@ -10,10 +11,14 @@ const PluginHarnessSingleSelect = props => (
     type="find-import-profile"
     id="clickable-find-import-profile"
     searchLabel={<FormattedMessage id="ui-plugin-find-import-profile.pluggable.caption" />}
-    marginTop0
-    searchButtonStyle="link"
+    searchButtonStyle="default"
     addLines={noop}
+    entityKey={ENTITY_KEYS.JOB_PROFILES}
+    dataKey={ENTITY_KEYS.JOB_PROFILES}
+    disabled={false}
     isSingleSelect
+    marginTop0
+    data-test-plugin-find-record-button
     {...props}
   >
     <span data-test-no-plugin-available>

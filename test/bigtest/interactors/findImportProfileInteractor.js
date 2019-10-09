@@ -7,7 +7,8 @@ import {
   property,
 } from '@bigtest/interactor';
 
-@interactor class PluginModalInteractor {
+@interactor
+class PluginModalInteractor {
   static defaultScope = '[data-test-find-records-modal]';
 
   instances = collection('[role=group] [role=row]', {
@@ -23,7 +24,8 @@ import {
   selectAll = scoped('[data-test-find-records-modal-select-all]', { click: clickable() });
 }
 
-@interactor class FindImportProfileInteractor {
+@interactor
+class FindImportProfileInteractor {
   button = scoped('[data-test-plugin-find-record-button]', {
     click: clickable(),
     isFocused: is(':focus'),

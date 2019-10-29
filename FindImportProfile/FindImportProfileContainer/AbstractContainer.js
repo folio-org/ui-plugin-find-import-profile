@@ -54,6 +54,7 @@ export class AbstractContainer extends Component {
 
   render(props) {
     const {
+      stripes,
       resources,
       children,
       entityKey,
@@ -90,6 +91,7 @@ export class AbstractContainer extends Component {
       sortableColumns: get(profileShape, 'visibleColumns', []),
       source: this.source,
       data: { records: get(resources, 'records.records', []) },
+      stripes,
     });
   }
 }

@@ -21,7 +21,7 @@ describe('Find Import Profiles plugin', function () {
     await findProfiles.whenLoaded();
   });
 
-  describe.only('Pick Profiles button', () => {
+  describe('Pick Profiles button', () => {
     it('should be rendered', function () {
       return expect(findProfiles.button.isPresent).to.be.true;
     });

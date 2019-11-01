@@ -1,11 +1,11 @@
 import { camelize } from '@bigtest/mirage';
 
 // auto-import all mirage submodules
-const req = require.context('../../../node_modules/@folio/data-import/test/bigtest/network', true, /\.js$/);
+// const req = require.context('../../../node_modules/@folio/data-import/test/bigtest/network', true, /\.js$/);
+const req = require.context('@folio/data-import/test/bigtest/network', true, /\.js$/);
+
 const modules = req.keys().reduce((acc, modulePath) => {
-  const moduleParts = modulePath.split('/');
-  const moduleType = moduleParts[1];
-  const moduleName = moduleParts[2];
+  const [, moduleType, moduleName] = modulePath.split('/');
 
   if (moduleType === 'configs') return acc;
 

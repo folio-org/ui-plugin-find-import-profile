@@ -8,20 +8,19 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-const LINES_COUNT = 15;
+const LINES_COUNT = 3;
 
 describe('Find Import Profiles plugin', function () {
   const findProfiles = new FindImportProfileInteractor();
 
-  appInit();
+  appInit({ scenarios: ['fetch-job-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
 
   beforeEach(async function () {
-    this.server.createList('jobProfile', LINES_COUNT);
     this.visit('/dummy');
     await findProfiles.whenLoaded();
   });
 
-  describe.only('Pick Profiles button', () => {
+  describe('Pick Profiles button', () => {
     it('should be rendered', function () {
       return expect(findProfiles.button.isPresent).to.be.true;
     });

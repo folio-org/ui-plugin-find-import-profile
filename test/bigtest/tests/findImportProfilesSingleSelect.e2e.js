@@ -8,15 +8,17 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-const LINES_COUNT = 15;
+const LINES_COUNT = 3;
 
 describe('Find Data Import Profiles plugin with single select option', function () {
   const findProfiles = new FindImportProfileInteractor();
 
-  appInit({ isSingleSelect: true });
+  appInit({
+    isSingleSelect: true,
+    scenarios: ['fetch-job-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'],
+  });
 
   beforeEach(async function () {
-    this.server.createList('jobProfile', LINES_COUNT);
     this.visit('/dummy');
     await findProfiles.whenLoaded();
   });

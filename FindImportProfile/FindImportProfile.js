@@ -10,6 +10,7 @@ import {
   PluginFindRecordModal,
 } from '@folio/stripes-acq-components';
 import { ConfirmationModal } from '@folio/stripes-components';
+import SafeHTMLMessage from '@folio/react-intl-safe-html';
 
 import {
   ENTITY_KEYS,
@@ -45,9 +46,6 @@ const FindImportProfile = ({
   const FindImportProfileContainer = profileContainers[entityKey];
 
   const [isModalOpen, showModal] = useState(false);
-  const [linkedProfileName, setLinkedProfileName] = useState('');
-  const [linkedProfileType, setLinkedProfileType] = useState('');
-  const [currentProfileName, setCurrentProfileName] = useState('');
   const [message, setMessage] = useState([]);
 
   const fetchAssociations = async (props, id) => {
@@ -86,29 +84,33 @@ const FindImportProfile = ({
       const associations = await fetchAssociations(props, record.id);
 
       if (!isEmpty(associations)) {
-        const linkedProfileMessage = (
-          <FormattedMessage
+        const currentProfileName = record.name;
+        const linkedProfileName = get(associations, [0, 'content', 'name']);
+        const linkedProfileType = get(associations, [0, 'contentType']);
+
+        linkedProfilesMessages.push(
+          <SafeHTMLMessage
             id="ui-plugin-find-import-profile.confirmationModal.linkedProfiles"
             values={{
-              currentProfileName: record.name,
+              currentProfileName,
               profileType: PROFILE_NAMES[entityKey],
-              linkedProfileName: get(associations, [0, 'content', 'name']),
-              linkedProfileType: get(associations, [0, 'contentType']),
+              linkedProfileName,
+              linkedProfileType: PROFILE_NAMES[linkedProfileType],
             }}
           />
         );
-
-        linkedProfilesMessages.push(linkedProfileMessage);
       }
     }
 
     if (!isEmpty(linkedProfilesMessages)) {
       multiSelectMessage.push(
         <FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.multiple.body" />,
-        linkedProfilesMessages.map(profile => <p>{profile}</p>),
-        <FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.note">
-          {msg => <p>{msg}</p>}
-        </FormattedMessage>,
+        linkedProfilesMessages.map((profile, i) => <p key={i}>{profile}</p>),
+        <SafeHTMLMessage
+          id="ui-plugin-find-import-profile.confirmationModal.note"
+          tagName="p"
+          values={{ profileType: PROFILE_NAMES[entityKey] }}
+        />,
       );
     }
 
@@ -121,23 +123,26 @@ const FindImportProfile = ({
     const associations = await fetchAssociations(props, record.id);
 
     if (!isEmpty(associations)) {
-      setCurrentProfileName(record.name);
-      setLinkedProfileName(get(associations, [0, 'content', 'name']));
-      setLinkedProfileType(get(associations, [0, 'contentType']));
+      const currentProfileName = record.name;
+      const linkedProfileName = get(associations, [0, 'content', 'name']);
+      const linkedProfileType = get(associations, [0, 'contentType']);
 
       singleSelectMessage.push(
-        <FormattedMessage
+        <SafeHTMLMessage
           id="ui-plugin-find-import-profile.confirmationModal.single.body"
+          tagName="p"
           values={{
             linkedProfileName,
             linkedProfileType: PROFILE_NAMES[linkedProfileType],
             profileType: PROFILE_NAMES[entityKey],
-            newProfileName: currentProfileName,
+            currentProfileName,
           }}
         />,
-        <FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.note">
-          {msg => <p>{msg}</p>}
-        </FormattedMessage>,
+        <SafeHTMLMessage
+          id="ui-plugin-find-import-profile.confirmationModal.note"
+          tagName="p"
+          values={{ profileType: PROFILE_NAMES[entityKey] }}
+        />,
       );
     }
 
@@ -171,7 +176,12 @@ const FindImportProfile = ({
           <ConfirmationModal
             id="relink-profile"
             confirmLabel={<FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.label" />}
-            heading={<FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.heading" />}
+            heading={(
+              <FormattedMessage
+                id="ui-plugin-find-import-profile.confirmationModal.heading"
+                values={{ profileType: PROFILE_NAMES[entityKey] }}
+              />
+            )}
             message={message}
             onCancel={() => showModal(false)}
             onConfirm={() => {

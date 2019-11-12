@@ -8,14 +8,14 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-const LINES_COUNT = 3;
+const LINES_COUNT = 8;
 
 describe('Find Data Import Profiles plugin with single select option', function () {
   const findProfiles = new FindImportProfileInteractor();
 
   appInit({
     isSingleSelect: true,
-    scenarios: ['fetch-job-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'],
+    scenarios: ['fetch-action-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'],
   });
 
   beforeEach(async function () {
@@ -46,16 +46,6 @@ describe('Find Data Import Profiles plugin with single select option', function 
 
     it('should return a set of results', function () {
       return expect(findProfiles.modal.instances().length).to.be.equal(LINES_COUNT);
-    });
-
-    describe('select a line (click on it)', function () {
-      beforeEach(async function () {
-        await findProfiles.modal.instances(1).click();
-      });
-
-      it('modal is closed', function () {
-        return expect(findProfiles.modal.isPresent).to.be.false;
-      });
     });
   });
 });

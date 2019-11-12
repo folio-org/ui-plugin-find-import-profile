@@ -7,6 +7,8 @@ import {
   property,
 } from '@bigtest/interactor';
 
+import ConfirmationModalInteractor from '@folio/stripes-components/lib/ConfirmationModal/tests/interactor';
+
 @interactor
 class PluginModalInteractor {
   static defaultScope = '[data-test-find-records-modal]';
@@ -22,6 +24,7 @@ class PluginModalInteractor {
   });
 
   selectAll = scoped('[data-test-find-records-modal-select-all]', { click: clickable() });
+  confirmationModal = new ConfirmationModalInteractor('#relink-profile');
 }
 
 @interactor

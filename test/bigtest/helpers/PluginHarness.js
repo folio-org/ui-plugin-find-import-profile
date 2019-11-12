@@ -13,9 +13,10 @@ const PluginHarness = props => (
     searchLabel={<FormattedMessage id="ui-plugin-find-import-profile.pluggable.caption" />}
     searchButtonStyle="default"
     addLines={noop}
-    entityKey={ENTITY_KEYS.JOB_PROFILES}
-    dataKey={ENTITY_KEYS.JOB_PROFILES}
+    entityKey={ENTITY_KEYS.ACTION_PROFILES}
+    dataKey={ENTITY_KEYS.ACTION_PROFILES}
     disabled={false}
+    isMultiLink={false}
     marginTop0
     data-test-plugin-find-record-button
     {...props}

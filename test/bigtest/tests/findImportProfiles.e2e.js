@@ -8,12 +8,12 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-const LINES_COUNT = 3;
+const LINES_COUNT = 8;
 
 describe('Find Import Profiles plugin', function () {
   const findProfiles = new FindImportProfileInteractor();
 
-  appInit({ scenarios: ['fetch-job-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
+  appInit({ scenarios: ['fetch-action-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
 
   beforeEach(async function () {
     this.visit('/dummy');

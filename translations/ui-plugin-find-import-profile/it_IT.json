@@ -12,10 +12,10 @@
     "entities.matchProfiles": "Match Profiles",
     "entities.actionProfiles": "Action Profiles",
     "entities.mappingProfiles": "Field Mapping Profiles",
-    "confirmationModal.heading": "Relink action profile?",
+    "confirmationModal.heading": "Relink {profileType}?",
     "confirmationModal.label": "Relink",
-    "confirmationModal.single.body": "This {profileType} is already linked to {linkedProfileName} {linkedProfileType}. Do you want to unlink from the previous {linkedProfileType} and relink to this {currentProfileName} {linkedProfileType}",
+    "confirmationModal.single.body": "This {profileType} is already linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Do you want to unlink from the previous {linkedProfileType} and relink to this <b>\"{currentProfileName}\"</b> {linkedProfileType}",
     "confirmationModal.multiple.body": "This selected profiles are already linked to another profiles.",
-    "confirmationModal.linkedProfiles": "{currentProfileName} {profileType} is linked to {linkedProfileName} {linkedProfileType}",
-    "confirmationModal.note": "NOTE that the action profile will not be relinked until you save the Field mapping profile."
+    "confirmationModal.linkedProfiles": "<b>\"{currentProfileName}\"</b> {profileType} is linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}",
+    "confirmationModal.note": "<b>NOTE</b> that the action profile will not be relinked until you save the {profileType}"
 }

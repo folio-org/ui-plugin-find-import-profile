@@ -8,6 +8,12 @@ import {
 } from '@bigtest/interactor';
 
 import ConfirmationModalInteractor from '@folio/stripes-components/lib/ConfirmationModal/tests/interactor';
+import { ENTITY_KEYS } from '@folio/data-import/src/utils/constants';
+
+const buttonProperties = {
+  click: clickable(),
+  isFocused: is(':focus'),
+};
 
 @interactor
 class PluginModalInteractor {
@@ -29,10 +35,10 @@ class PluginModalInteractor {
 
 @interactor
 class FindImportProfileInteractor {
-  button = scoped('[data-test-plugin-find-record-button]', {
-    click: clickable(),
-    isFocused: is(':focus'),
-  });
+  actionProfileButton = scoped(`#${ENTITY_KEYS.ACTION_PROFILES} [data-test-plugin-find-record-button]`, buttonProperties);
+  jobProfileButton = scoped(`#${ENTITY_KEYS.JOB_PROFILES} [data-test-plugin-find-record-button]`, buttonProperties);
+  matchProfileButton = scoped(`#${ENTITY_KEYS.MATCH_PROFILES} [data-test-plugin-find-record-button]`, buttonProperties);
+  mappingProfileButton = scoped(`#${ENTITY_KEYS.MAPPING_PROFILES} [data-test-plugin-find-record-button]`, buttonProperties);
 
   modal = new PluginModalInteractor();
 

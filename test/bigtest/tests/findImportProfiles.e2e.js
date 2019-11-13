@@ -8,64 +8,244 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-const LINES_COUNT = 8;
+const MORE_LINES_COUNT = 8;
+const LESS_LINES_COUNT = 3;
 
 describe('Find Import Profiles plugin', function () {
   const findProfiles = new FindImportProfileInteractor();
 
-  appInit({ scenarios: ['fetch-action-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
+  describe('For action profile', () => {
+    appInit({ scenarios: ['fetch-action-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
 
-  beforeEach(async function () {
-    this.visit('/dummy');
-    await findProfiles.whenLoaded();
-  });
-
-  describe('Pick Profiles button', () => {
-    it('should be rendered', function () {
-      return expect(findProfiles.button.isPresent).to.be.true;
-    });
-
-    describe('click action', function () {
-      beforeEach(async function () {
-        await findProfiles.button.click();
-      });
-
-      it('should open a modal', function () {
-        return expect(findProfiles.modal.isPresent).to.be.true;
-      });
-    });
-  });
-
-  describe('modal list', function () {
     beforeEach(async function () {
-      await findProfiles.button.click();
+      this.visit('/dummy');
+      await findProfiles.whenLoaded();
     });
 
-    it('should return a set of results', function () {
-      return expect(findProfiles.modal.instances().length).to.be.equal(LINES_COUNT);
+    describe('Pick Profiles button', () => {
+      it('should be rendered', function () {
+        return expect(findProfiles.actionProfileButton.isPresent).to.be.true;
+      });
+
+      describe('click action', function () {
+        beforeEach(async function () {
+          await findProfiles.actionProfileButton.click();
+        });
+
+        it('should open a modal', function () {
+          return expect(findProfiles.modal.isPresent).to.be.true;
+        });
+      });
     });
 
-    it('should display disabled save button', function () {
-      return expect(findProfiles.modal.save.isDisabled).to.be.true;
-    });
-
-    describe('select a line', function () {
+    describe('modal list', function () {
       beforeEach(async function () {
-        await findProfiles.modal.instances(1).selectLine();
+        await findProfiles.actionProfileButton.click();
       });
 
-      it('should enable Save button', function () {
-        return expect(findProfiles.modal.save.isDisabled).to.be.false;
+      it('should return a set of results', function () {
+        return expect(findProfiles.modal.instances().length).to.be.equal(MORE_LINES_COUNT);
+      });
+
+      it('should display disabled save button', function () {
+        return expect(findProfiles.modal.save.isDisabled).to.be.true;
+      });
+
+      describe('select a line', function () {
+        beforeEach(async function () {
+          await findProfiles.modal.instances(1).selectLine();
+        });
+
+        it('should enable Save button', function () {
+          return expect(findProfiles.modal.save.isDisabled).to.be.false;
+        });
+      });
+
+      describe('select all', function () {
+        beforeEach(async function () {
+          await findProfiles.modal.selectAll.click();
+        });
+
+        it('should enable Save button', function () {
+          return expect(findProfiles.modal.save.isDisabled).to.be.false;
+        });
+      });
+    });
+  });
+
+  describe('For job profile', () => {
+    appInit({ scenarios: ['fetch-job-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
+
+    beforeEach(async function () {
+      this.visit('/dummy');
+      await findProfiles.whenLoaded();
+    });
+
+    describe('Pick Profiles button', () => {
+      it('should be rendered', function () {
+        return expect(findProfiles.jobProfileButton.isPresent).to.be.true;
+      });
+
+      describe('click action', function () {
+        beforeEach(async function () {
+          await findProfiles.jobProfileButton.click();
+        });
+
+        it('should open a modal', function () {
+          return expect(findProfiles.modal.isPresent).to.be.true;
+        });
       });
     });
 
-    describe('select all', function () {
+    describe('modal list', function () {
       beforeEach(async function () {
-        await findProfiles.modal.selectAll.click();
+        await findProfiles.jobProfileButton.click();
       });
 
-      it('should enable Save button', function () {
-        return expect(findProfiles.modal.save.isDisabled).to.be.false;
+      it('should return a set of results', function () {
+        return expect(findProfiles.modal.instances().length).to.be.equal(LESS_LINES_COUNT);
+      });
+
+      it('should display disabled save button', function () {
+        return expect(findProfiles.modal.save.isDisabled).to.be.true;
+      });
+
+      describe('select a line', function () {
+        beforeEach(async function () {
+          await findProfiles.modal.instances(1).selectLine();
+        });
+
+        it('should enable Save button', function () {
+          return expect(findProfiles.modal.save.isDisabled).to.be.false;
+        });
+      });
+
+      describe('select all', function () {
+        beforeEach(async function () {
+          await findProfiles.modal.selectAll.click();
+        });
+
+        it('should enable Save button', function () {
+          return expect(findProfiles.modal.save.isDisabled).to.be.false;
+        });
+      });
+    });
+  });
+
+  describe('For match profile', () => {
+    appInit({ scenarios: ['fetch-match-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
+
+    beforeEach(async function () {
+      this.visit('/dummy');
+      await findProfiles.whenLoaded();
+    });
+
+    describe('Pick Profiles button', () => {
+      it('should be rendered', function () {
+        return expect(findProfiles.matchProfileButton.isPresent).to.be.true;
+      });
+
+      describe('click action', function () {
+        beforeEach(async function () {
+          await findProfiles.matchProfileButton.click();
+        });
+
+        it('should open a modal', function () {
+          return expect(findProfiles.modal.isPresent).to.be.true;
+        });
+      });
+    });
+
+    describe('modal list', function () {
+      beforeEach(async function () {
+        await findProfiles.matchProfileButton.click();
+      });
+
+      it('should return a set of results', function () {
+        return expect(findProfiles.modal.instances().length).to.be.equal(MORE_LINES_COUNT);
+      });
+
+      it('should display disabled save button', function () {
+        return expect(findProfiles.modal.save.isDisabled).to.be.true;
+      });
+
+      describe('select a line', function () {
+        beforeEach(async function () {
+          await findProfiles.modal.instances(1).selectLine();
+        });
+
+        it('should enable Save button', function () {
+          return expect(findProfiles.modal.save.isDisabled).to.be.false;
+        });
+      });
+
+      describe('select all', function () {
+        beforeEach(async function () {
+          await findProfiles.modal.selectAll.click();
+        });
+
+        it('should enable Save button', function () {
+          return expect(findProfiles.modal.save.isDisabled).to.be.false;
+        });
+      });
+    });
+  });
+
+  describe('For mapping profile', () => {
+    appInit({ scenarios: ['fetch-mapping-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
+
+    beforeEach(async function () {
+      this.visit('/dummy');
+      await findProfiles.whenLoaded();
+    });
+
+    describe('Pick Profiles button', () => {
+      it('should be rendered', function () {
+        return expect(findProfiles.mappingProfileButton.isPresent).to.be.true;
+      });
+
+      describe('click action', function () {
+        beforeEach(async function () {
+          await findProfiles.mappingProfileButton.click();
+        });
+
+        it('should open a modal', function () {
+          return expect(findProfiles.modal.isPresent).to.be.true;
+        });
+      });
+    });
+
+    describe('modal list', function () {
+      beforeEach(async function () {
+        await findProfiles.mappingProfileButton.click();
+      });
+
+      it('should return a set of results', function () {
+        return expect(findProfiles.modal.instances().length).to.be.equal(LESS_LINES_COUNT);
+      });
+
+      it('should display disabled save button', function () {
+        return expect(findProfiles.modal.save.isDisabled).to.be.true;
+      });
+
+      describe('select a line', function () {
+        beforeEach(async function () {
+          await findProfiles.modal.instances(1).selectLine();
+        });
+
+        it('should enable Save button', function () {
+          return expect(findProfiles.modal.save.isDisabled).to.be.false;
+        });
+      });
+
+      describe('select all', function () {
+        beforeEach(async function () {
+          await findProfiles.modal.selectAll.click();
+        });
+
+        it('should enable Save button', function () {
+          return expect(findProfiles.modal.save.isDisabled).to.be.false;
+        });
       });
     });
   });

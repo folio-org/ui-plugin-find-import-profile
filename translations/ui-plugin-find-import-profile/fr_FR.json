@@ -1,11 +1,11 @@
 {
     "meta.title": "{profileType}",
     "meta.pluginTitle": "Test Find Profile Plugin",
-    "addProfile": "Add {profileType}",
+    "addProfile": "Ajouter",
     "pluggable.caption": "Pick Profile",
     "pluggable.errors.plugin.disabled": "No plugin available!",
     "modal.title": "Select {profileType}",
-    "modal.footer.save": "Save",
+    "modal.footer.save": "Sauvegarder",
     "modal.footer.close": "Close",
     "modal.footer.totalSelected": "Total selected: {count}",
     "entities.jobProfiles": "Job Profiles",

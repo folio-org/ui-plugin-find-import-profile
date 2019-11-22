@@ -1,7 +1,7 @@
 {
     "meta.title": "{profileType}",
     "meta.pluginTitle": "Test Find Profile Plugin",
-    "addProfile": "Ajouter",
+    "addProfile": "Ajouter {profileType}",
     "pluggable.caption": "Pick Profile",
     "pluggable.errors.plugin.disabled": "No plugin available!",
     "modal.title": "Select {profileType}",

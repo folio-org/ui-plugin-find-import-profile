@@ -5,7 +5,7 @@
     "pluggable.caption": "Pick Profile",
     "pluggable.errors.plugin.disabled": "No plugin available!",
     "modal.title": "Select {profileType}",
-    "modal.footer.save": "Save",
+    "modal.footer.save": "Salva",
     "modal.footer.close": "Close",
     "modal.footer.totalSelected": "Total selected: {count}",
     "entities.jobProfiles": "Job Profiles",

@@ -45,6 +45,6 @@ const PluginHarness = props => {
       {layout([ACTION_PROFILES, JOB_PROFILES, MATCH_PROFILES, MAPPING_PROFILES])}
     </Fragment>
   );
-}
+};
 
 export default PluginHarness;

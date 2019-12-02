@@ -46,6 +46,7 @@ const FindImportProfile = ({
   const FindImportProfileContainer = profileContainers[entityKey];
 
   const [isModalOpen, showModal] = useState(false);
+  const [selectedProfiles, setSelectedProfiles] = useState([]);
   const [message, setMessage] = useState([]);
 
   const fetchAssociations = async (props, id) => {
@@ -75,6 +76,7 @@ const FindImportProfile = ({
   };
 
   const checkMultipleProfilesAssociations = async (records, props) => {
+    setSelectedProfiles(records);
     const { onSaveMultiple } = props;
     const linkedProfilesMessages = [];
     const multiSelectMessage = [];
@@ -118,6 +120,7 @@ const FindImportProfile = ({
   };
 
   const checkProfileAssociations = async (e, record, props) => {
+    setSelectedProfiles([record]);
     const singleSelectMessage = [];
     const { onSaveMultiple } = props;
     const associations = await fetchAssociations(props, record.id);
@@ -186,7 +189,8 @@ const FindImportProfile = ({
             onCancel={() => showModal(false)}
             onConfirm={() => {
               showModal(false);
-              modalProps.onSelectRow();
+              addLines(selectedProfiles);
+              modalProps.closeModal();
             }}
             open={isModalOpen}
           />

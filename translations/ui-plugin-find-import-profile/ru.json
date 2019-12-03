@@ -4,7 +4,7 @@
     "addProfile": "Add {profileType}",
     "pluggable.caption": "Pick Profile",
     "pluggable.errors.plugin.disabled": "No plugin available!",
-    "modal.title": "Select {profileType}",
+    "modal.title": "Выберите {profileType}",
     "modal.footer.save": "Сохранить",
     "modal.footer.close": "Закрыть",
     "modal.footer.totalSelected": "Total selected: {count}",

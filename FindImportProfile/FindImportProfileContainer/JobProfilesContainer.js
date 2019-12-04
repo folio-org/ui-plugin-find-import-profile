@@ -4,7 +4,8 @@ import { stripesConnect } from '@folio/stripes-core';
 import { AbstractContainer } from './AbstractContainer';
 
 class JobProfilesContainer extends AbstractContainer {
-  static manifest = Object.freeze({ ...jobProfilesShape.manifest });
+  static manifest = Object.freeze(jobProfilesShape.manifest);
+  static defaultProps = { profileShape: jobProfilesShape };
 
   render() {
     return super.render({

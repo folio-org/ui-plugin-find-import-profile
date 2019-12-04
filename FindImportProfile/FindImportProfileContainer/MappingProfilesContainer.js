@@ -4,7 +4,8 @@ import { stripesConnect } from '@folio/stripes-core';
 import { AbstractContainer } from './AbstractContainer';
 
 class MappingProfilesContainer extends AbstractContainer {
-  static manifest = Object.freeze({ ...mappingProfilesShape.manifest });
+  static manifest = Object.freeze(mappingProfilesShape.manifest);
+  static defaultProps = { profileShape: mappingProfilesShape };
 
   render() {
     return super.render({

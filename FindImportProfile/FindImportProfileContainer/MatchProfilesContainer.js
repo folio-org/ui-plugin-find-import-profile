@@ -4,7 +4,8 @@ import { stripesConnect } from '@folio/stripes-core';
 import { AbstractContainer } from './AbstractContainer';
 
 class MatchProfilesContainer extends AbstractContainer {
-  static manifest = Object.freeze({ ...matchProfilesShape.manifest });
+  static manifest = Object.freeze(matchProfilesShape.manifest);
+  static defaultProps = { profileShape: matchProfilesShape };
 
   render() {
     return super.render({

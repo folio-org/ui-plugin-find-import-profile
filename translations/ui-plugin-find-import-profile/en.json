@@ -22,5 +22,5 @@
   "confirmationModal.single.body": "This {profileType} is already linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Do you want to unlink from the previous {linkedProfileType} and relink to this <b>\"{currentProfileName}\"</b> {linkedProfileType}",
   "confirmationModal.multiple.body": "This selected profiles are already linked to another profiles.",
   "confirmationModal.linkedProfiles": "<b>\"{currentProfileName}\"</b> {profileType} is linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}",
-  "confirmationModal.note": "<b>NOTE</b> that the action profile will not be relinked until you save the {profileType}"
+  "confirmationModal.note": "<b>NOTE</b> that the {profileType} will not be relinked until you save the {parentType}"
 }

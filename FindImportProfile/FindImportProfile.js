@@ -38,6 +38,7 @@ const profileContainers = {
 
 const FindImportProfile = ({
   entityKey,
+  parentType,
   addLines,
   isSingleSelect,
   isMultiLink,
@@ -109,7 +110,10 @@ const FindImportProfile = ({
         <SafeHTMLMessage
           id="ui-plugin-find-import-profile.confirmationModal.note"
           tagName="p"
-          values={{ profileType: PROFILE_NAMES[entityKey] }}
+          values={{
+            profileType: PROFILE_NAMES[entityKey],
+            parentType: PROFILE_NAMES[parentType],
+          }}
         />,
       );
     }
@@ -141,7 +145,10 @@ const FindImportProfile = ({
         <SafeHTMLMessage
           id="ui-plugin-find-import-profile.confirmationModal.note"
           tagName="p"
-          values={{ profileType: PROFILE_NAMES[entityKey] }}
+          values={{
+            profileType: PROFILE_NAMES[entityKey],
+            parentType: PROFILE_NAMES[parentType],
+          }}
         />,
       );
     }
@@ -200,6 +207,7 @@ FindImportProfile.propTypes = {
   dataKey: PropTypes.string.isRequired,
   addLines: PropTypes.func.isRequired,
   entityKey: PropTypes.string.isRequired,
+  parentType: PropTypes.string.isRequired,
   isMultiLink: PropTypes.bool,
   disabled: PropTypes.bool,
   marginBottom0: PropTypes.bool,

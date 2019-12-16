@@ -17,5 +17,5 @@
     "confirmationModal.single.body": "This {profileType} is already linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Do you want to unlink from the previous {linkedProfileType} and relink to this <b>\"{currentProfileName}\"</b> {linkedProfileType}",
     "confirmationModal.multiple.body": "This selected profiles are already linked to another profiles.",
     "confirmationModal.linkedProfiles": "<b>\"{currentProfileName}\"</b> {profileType} is linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}",
-    "confirmationModal.note": "<b> REMARQUE </b> : le profil d'action ne sera pas lié de nouveau jusqu'à ce que vous enregistriez le {profileType}"
+    "confirmationModal.note": "<b> NOTE </b>  le {profileType} ne sera pas lié à nouveau tant que vous n'aurez pas enregistré le {parentType}"
 }

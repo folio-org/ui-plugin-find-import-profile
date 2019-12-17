@@ -6,6 +6,12 @@ import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import {
+  get,
+  isEmpty,
+  noop,
+} from 'lodash';
+
+import {
   PluginFindRecord,
   PluginFindRecordModal,
 } from '@folio/stripes-acq-components';
@@ -22,11 +28,6 @@ import {
   createUrl,
 } from '@folio/data-import/src/utils';
 
-import {
-  get,
-  isEmpty,
-} from 'lodash';
-
 import * as containers from './FindImportProfileContainer';
 
 const profileContainers = {
@@ -39,7 +40,8 @@ const profileContainers = {
 const FindImportProfile = ({
   entityKey,
   parentType,
-  addLines,
+  onLink,
+  onClose,
   isSingleSelect,
   isMultiLink,
   ...rest
@@ -160,7 +162,7 @@ const FindImportProfile = ({
   return (
     <PluginFindRecord
       {...rest}
-      selectRecordsCb={addLines}
+      selectRecordsCb={onLink}
     >
       {modalProps => (
         <Fragment>
@@ -178,6 +180,10 @@ const FindImportProfile = ({
                   ...viewProps,
                   ...modalProps,
                 })}
+                closeModal={() => {
+                  modalProps.closeModal();
+                  onClose();
+                }}
               />
             )}
           </FindImportProfileContainer>
@@ -194,7 +200,7 @@ const FindImportProfile = ({
             onCancel={() => showModal(false)}
             onConfirm={() => {
               showModal(false);
-              addLines(selectedProfiles);
+              onLink(selectedProfiles);
               modalProps.closeModal();
             }}
             open={isModalOpen}
@@ -207,7 +213,6 @@ const FindImportProfile = ({
 
 FindImportProfile.propTypes = {
   dataKey: PropTypes.string.isRequired,
-  addLines: PropTypes.func.isRequired,
   entityKey: PropTypes.string.isRequired,
   parentType: PropTypes.string.isRequired,
   isMultiLink: PropTypes.bool,
@@ -218,7 +223,9 @@ FindImportProfile.propTypes = {
   searchLabel: PropTypes.node,
   stripes: PropTypes.object,
   isSingleSelect: PropTypes.bool,
+  onLink: PropTypes.func.isRequired,
   onSaveMultiple: PropTypes.func,
+  onClose: PropTypes.func,
 };
 
 FindImportProfile.defaultProps = {
@@ -229,6 +236,7 @@ FindImportProfile.defaultProps = {
   searchLabel: <FormattedMessage id="ui-plugin-find-import-profile.addProfile" />,
   isSingleSelect: false,
   isMultiLink: true,
+  onClose: noop,
 };
 
 export default FindImportProfile;

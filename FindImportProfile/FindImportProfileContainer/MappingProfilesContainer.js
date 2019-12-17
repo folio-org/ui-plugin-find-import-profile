@@ -15,4 +15,4 @@ class MappingProfilesContainer extends AbstractContainer {
   }
 }
 
-export default stripesConnect(MappingProfilesContainer, { dataKey: 'find_IJP_line' });
+export default stripesConnect(MappingProfilesContainer, { dataKey: 'find_IMPP_line' });

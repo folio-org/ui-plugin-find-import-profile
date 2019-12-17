@@ -15,4 +15,4 @@ class MatchProfilesContainer extends AbstractContainer {
   }
 }
 
-export default stripesConnect(MatchProfilesContainer, { dataKey: 'find_IJP_line' });
+export default stripesConnect(MatchProfilesContainer, { dataKey: 'find_IMAP_line' });

@@ -53,13 +53,10 @@ const FindImportProfile = ({
   const fetchAssociations = async (props, id) => {
     const { stripes: { okapi } } = props;
     const { url } = okapi;
+    const baseUrl = `${url}/data-import-profiles/profileAssociations/${id}/masters`;
 
     const response = await fetch(
-      createUrl(
-        `${url}/data-import-profiles/profileAssociations/${id}/masters`,
-        { detailType: ASSOCIATION_TYPES[entityKey] },
-        false
-      ),
+      createUrl(baseUrl, { detailType: ASSOCIATION_TYPES[entityKey] }, false),
       { headers: { ...createOkapiHeaders(okapi) } },
     );
     const body = await response.json();
@@ -82,6 +79,7 @@ const FindImportProfile = ({
     const linkedProfilesMessages = [];
     const multiSelectMessage = [];
 
+    // eslint-disable-next-line no-unused-vars
     for (const record of records) {
       // eslint-disable-next-line no-await-in-loop
       const associations = await fetchAssociations(props, record.id);
@@ -91,7 +89,7 @@ const FindImportProfile = ({
         const linkedProfileName = get(associations, [0, 'content', 'name']);
         const linkedProfileType = get(associations, [0, 'contentType']);
 
-        linkedProfilesMessages.push(
+        linkedProfilesMessages.push((
           <SafeHTMLMessage
             id="ui-plugin-find-import-profile.confirmationModal.linkedProfiles"
             values={{
@@ -101,7 +99,7 @@ const FindImportProfile = ({
               linkedProfileType: PROFILE_NAMES[linkedProfileType],
             }}
           />
-        );
+        ));
       }
     }
 

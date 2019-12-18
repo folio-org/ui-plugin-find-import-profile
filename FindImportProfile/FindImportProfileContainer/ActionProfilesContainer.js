@@ -15,4 +15,4 @@ class ActionProfilesContainer extends AbstractContainer {
   }
 }
 
-export default stripesConnect(ActionProfilesContainer, { dataKey: 'find_IJP_line' });
+export default stripesConnect(ActionProfilesContainer, { dataKey: 'find_IAP_line' });

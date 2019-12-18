@@ -22,8 +22,8 @@
         "beforeColon": false
       }
     ],
-    "import/no-extraneous-dependencies": false,
-    "import/prefer-default-export": false,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
     "padding-line-between-statements": [
       "error",
       {
@@ -76,7 +76,7 @@
         "maxBOF": 0
       }
     ],
-    "react/jsx-one-expression-per-line": false,
+    "react/jsx-one-expression-per-line": 0,
     "react/jsx-wrap-multilines": [
       "error"
     ],

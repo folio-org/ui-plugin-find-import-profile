@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-import-profile",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Find and select Data Import Profiles plugin for Stripes",
   "repository": "folio-org/ui-plugin-find-import-profile",
   "publishConfig": {

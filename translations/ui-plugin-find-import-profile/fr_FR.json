@@ -14,7 +14,7 @@
     "entities.mappingProfiles": "Field Mapping Profiles",
     "confirmationModal.heading": "Relier {profileType} ?",
     "confirmationModal.label": "Relink",
-    "confirmationModal.single.body": "This {profileType} is already linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Do you want to unlink from the previous {linkedProfileType} and relink to this <b>\"{currentProfileName}\"</b> {linkedProfileType}",
+    "confirmationModal.single.body": "Ce {profileType} est déjà lié à <b> \" {linkedProfileName} \" </b> {linkedProfileType} . Voulez-vous vous dissocier de l'ancien {linkedProfileType} et le reconnecter à ce <b> \" {currentProfileName} \" </b> {linkedProfileType}",
     "confirmationModal.multiple.body": "This selected profiles are already linked to another profiles.",
     "confirmationModal.linkedProfiles": "<b> \" {currentProfileName} \" </b> {profileType} est lié à <b> \" {linkedProfileName} \" </b> {linkedProfileType}",
     "confirmationModal.note": "<b> NOTE </b>  le {profileType} ne sera pas lié à nouveau tant que vous n'aurez pas enregistré le {parentType}"

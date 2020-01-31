@@ -1,5 +1,8 @@
 # Change history for ui-plugin-find-import-profile
 
+## **1.2.0** (in progress)
+* Update eslint to v6.2.1 (UIPFIMP-8)
+
 ## [1.1.2](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v1.1.2) (2020-01-03)
 
 # Bugs fixed:

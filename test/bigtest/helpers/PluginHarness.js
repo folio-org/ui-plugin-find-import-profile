@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import noop from 'lodash/noop';
 
@@ -41,9 +41,9 @@ const PluginHarness = props => {
   ));
 
   return (
-    <Fragment>
+    <>
       {layout([ACTION_PROFILES, JOB_PROFILES, MATCH_PROFILES, MAPPING_PROFILES])}
-    </Fragment>
+    </>
   );
 };
 

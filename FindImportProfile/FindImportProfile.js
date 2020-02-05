@@ -1,7 +1,4 @@
-import React, {
-  Fragment,
-  useState,
-} from 'react';
+import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
@@ -142,7 +139,7 @@ const FindImportProfile = ({
       selectRecordsCb={onLink}
     >
       {modalProps => (
-        <Fragment>
+        <>
           <FindImportProfileContainer entityKey={entityKey}>
             {viewProps => (
               <PluginFindRecordModal
@@ -182,7 +179,7 @@ const FindImportProfile = ({
             }}
             open={isModalOpen}
           />
-        </Fragment>
+        </>
       )}
     </PluginFindRecord>
   );

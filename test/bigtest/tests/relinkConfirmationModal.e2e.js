@@ -8,7 +8,7 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-describe('Relink confirmation modal', function () {
+describe('Relink confirmation modal', () => {
   const findProfiles = new FindImportProfileInteractor();
 
   describe('For action profiles', () => {
@@ -25,38 +25,38 @@ describe('Relink confirmation modal', function () {
       });
 
       describe('when select a line (click on it)', () => {
-        beforeEach(async function () {
+        beforeEach(async () => {
           await findProfiles.modal.instances(1).click();
         });
 
-        it('then confirmation modal appears', function () {
+        it('then confirmation modal appears', () => {
           return expect(findProfiles.modal.confirmationModal.isPresent).to.be.true;
         });
 
         describe('when click on "Cancel" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.confirmationModal.cancelButton.click();
           });
 
-          it('then close the confirmation modal', function () {
+          it('then close the confirmation modal', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
           });
 
-          it('and return to the profile component search', function () {
+          it('and return to the profile component search', () => {
             return expect(findProfiles.modal.isPresent).to.be.true;
           });
         });
 
         describe('when click on "Relink" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.confirmationModal.confirmButton.click();
           });
 
-          it('then close the confirmation modal', function () {
+          it('then close the confirmation modal', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
           });
 
-          it('and close the profile component search', function () {
+          it('and close the profile component search', () => {
             return expect(findProfiles.modal.isPresent).to.be.false;
           });
         });
@@ -73,44 +73,44 @@ describe('Relink confirmation modal', function () {
       });
 
       describe('when select a several profiles', () => {
-        beforeEach(async function () {
+        beforeEach(async () => {
           await findProfiles.modal.instances(3).selectLine();
           await findProfiles.modal.instances(5).selectLine();
         });
 
         describe('and click on the "Save" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.save.click();
           });
 
-          it('then confirmation modal appears', function () {
+          it('then confirmation modal appears', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.true;
           });
 
           describe('when click on "Cancel" button', () => {
-            beforeEach(async function () {
+            beforeEach(async () => {
               await findProfiles.modal.confirmationModal.cancelButton.click();
             });
 
-            it('then close the confirmation modal', function () {
+            it('then close the confirmation modal', () => {
               return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
             });
 
-            it('and return to the profile component search', function () {
+            it('and return to the profile component search', () => {
               return expect(findProfiles.modal.isPresent).to.be.true;
             });
           });
 
           describe('when click on "Relink" button', () => {
-            beforeEach(async function () {
+            beforeEach(async () => {
               await findProfiles.modal.confirmationModal.confirmButton.click();
             });
 
-            it('then close the confirmation modal', function () {
+            it('then close the confirmation modal', () => {
               return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
             });
 
-            it('and close the profile component search', function () {
+            it('and close the profile component search', () => {
               return expect(findProfiles.modal.isPresent).to.be.false;
             });
           });
@@ -133,11 +133,11 @@ describe('Relink confirmation modal', function () {
       });
 
       describe('when select a line (click on it)', () => {
-        beforeEach(async function () {
+        beforeEach(async () => {
           await findProfiles.modal.instances(1).click();
         });
 
-        it('then confirmation modal does not appears', function () {
+        it('then confirmation modal does not appears', () => {
           return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
         });
       });
@@ -153,17 +153,17 @@ describe('Relink confirmation modal', function () {
       });
 
       describe('when select a several profiles', () => {
-        beforeEach(async function () {
+        beforeEach(async () => {
           await findProfiles.modal.instances(1).selectLine();
           await findProfiles.modal.instances(2).selectLine();
         });
 
         describe('and click on the "Save" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.save.click();
           });
 
-          it('then confirmation modal does not appears', function () {
+          it('then confirmation modal does not appears', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
           });
         });
@@ -185,38 +185,38 @@ describe('Relink confirmation modal', function () {
       });
 
       describe('when select a line (click on it)', () => {
-        beforeEach(async function () {
+        beforeEach(async () => {
           await findProfiles.modal.instances(1).click();
         });
 
-        it('then confirmation modal appears', function () {
+        it('then confirmation modal appears', () => {
           return expect(findProfiles.modal.confirmationModal.isPresent).to.be.true;
         });
 
         describe('when click on "Cancel" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.confirmationModal.cancelButton.click();
           });
 
-          it('then close the confirmation modal', function () {
+          it('then close the confirmation modal', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
           });
 
-          it('and return to the profile component search', function () {
+          it('and return to the profile component search', () => {
             return expect(findProfiles.modal.isPresent).to.be.true;
           });
         });
 
         describe('when click on "Relink" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.confirmationModal.confirmButton.click();
           });
 
-          it('then close the confirmation modal', function () {
+          it('then close the confirmation modal', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
           });
 
-          it('and close the profile component search', function () {
+          it('and close the profile component search', () => {
             return expect(findProfiles.modal.isPresent).to.be.false;
           });
         });
@@ -233,44 +233,44 @@ describe('Relink confirmation modal', function () {
       });
 
       describe('when select a several profiles', () => {
-        beforeEach(async function () {
+        beforeEach(async () => {
           await findProfiles.modal.instances(1).selectLine();
           await findProfiles.modal.instances(2).selectLine();
         });
 
         describe('and click on the "Save" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.save.click();
           });
 
-          it('then confirmation modal appears', function () {
+          it('then confirmation modal appears', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.true;
           });
 
           describe('when click on "Cancel" button', () => {
-            beforeEach(async function () {
+            beforeEach(async () => {
               await findProfiles.modal.confirmationModal.cancelButton.click();
             });
 
-            it('then close the confirmation modal', function () {
+            it('then close the confirmation modal', () => {
               return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
             });
 
-            it('and return to the profile component search', function () {
+            it('and return to the profile component search', () => {
               return expect(findProfiles.modal.isPresent).to.be.true;
             });
           });
 
           describe('when click on "Relink" button', () => {
-            beforeEach(async function () {
+            beforeEach(async () => {
               await findProfiles.modal.confirmationModal.confirmButton.click();
             });
 
-            it('then close the confirmation modal', function () {
+            it('then close the confirmation modal', () => {
               return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
             });
 
-            it('and close the profile component search', function () {
+            it('and close the profile component search', () => {
               return expect(findProfiles.modal.isPresent).to.be.false;
             });
           });
@@ -293,38 +293,38 @@ describe('Relink confirmation modal', function () {
       });
 
       describe('when select a line (click on it)', () => {
-        beforeEach(async function () {
+        beforeEach(async () => {
           await findProfiles.modal.instances(0).click();
         });
 
-        it('then confirmation modal appears', function () {
+        it('then confirmation modal appears', () => {
           return expect(findProfiles.modal.confirmationModal.isPresent).to.be.true;
         });
 
         describe('when click on "Cancel" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.confirmationModal.cancelButton.click();
           });
 
-          it('then close the confirmation modal', function () {
+          it('then close the confirmation modal', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
           });
 
-          it('and return to the profile component search', function () {
+          it('and return to the profile component search', () => {
             return expect(findProfiles.modal.isPresent).to.be.true;
           });
         });
 
         describe('when click on "Relink" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.confirmationModal.confirmButton.click();
           });
 
-          it('then close the confirmation modal', function () {
+          it('then close the confirmation modal', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
           });
 
-          it('and close the profile component search', function () {
+          it('and close the profile component search', () => {
             return expect(findProfiles.modal.isPresent).to.be.false;
           });
         });
@@ -341,44 +341,44 @@ describe('Relink confirmation modal', function () {
       });
 
       describe('when select a several profiles', () => {
-        beforeEach(async function () {
+        beforeEach(async () => {
           await findProfiles.modal.instances(2).selectLine();
           await findProfiles.modal.instances(0).selectLine();
         });
 
         describe('and click on the "Save" button', () => {
-          beforeEach(async function () {
+          beforeEach(async () => {
             await findProfiles.modal.save.click();
           });
 
-          it('then confirmation modal appears', function () {
+          it('then confirmation modal appears', () => {
             return expect(findProfiles.modal.confirmationModal.isPresent).to.be.true;
           });
 
           describe('when click on "Cancel" button', () => {
-            beforeEach(async function () {
+            beforeEach(async () => {
               await findProfiles.modal.confirmationModal.cancelButton.click();
             });
 
-            it('then close the confirmation modal', function () {
+            it('then close the confirmation modal', () => {
               return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
             });
 
-            it('and return to the profile component search', function () {
+            it('and return to the profile component search', () => {
               return expect(findProfiles.modal.isPresent).to.be.true;
             });
           });
 
           describe('when click on "Relink" button', () => {
-            beforeEach(async function () {
+            beforeEach(async () => {
               await findProfiles.modal.confirmationModal.confirmButton.click();
             });
 
-            it('then close the confirmation modal', function () {
+            it('then close the confirmation modal', () => {
               return expect(findProfiles.modal.confirmationModal.isPresent).to.be.false;
             });
 
-            it('and close the profile component search', function () {
+            it('and close the profile component search', () => {
               return expect(findProfiles.modal.isPresent).to.be.false;
             });
           });

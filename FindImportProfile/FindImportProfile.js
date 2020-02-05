@@ -6,6 +6,7 @@ import {
   get,
   isEmpty,
   noop,
+  flattenDeep,
 } from 'lodash';
 
 import {
@@ -17,15 +18,11 @@ import SafeHTMLMessage from '@folio/react-intl-safe-html';
 
 import {
   ENTITY_KEYS,
-  ASSOCIATION_TYPES,
   PROFILE_NAMES,
 } from '@folio/data-import/src/utils/constants';
-import {
-  createOkapiHeaders,
-  createUrl,
-} from '@folio/data-import/src/utils';
 
 import * as containers from './FindImportProfileContainer';
+import { fetchAssociations } from './utils/fetchAssociations';
 
 const profileContainers = {
   [ENTITY_KEYS.JOB_PROFILES]: containers.JobProfilesContainer,
@@ -37,6 +34,8 @@ const profileContainers = {
 const FindImportProfile = ({
   entityKey,
   parentType,
+  masterType,
+  profileName,
   onLink,
   onClose,
   isSingleSelect,
@@ -49,20 +48,6 @@ const FindImportProfile = ({
   const [selectedProfiles, setSelectedProfiles] = useState([]);
   const [message, setMessage] = useState([]);
 
-  const fetchAssociations = async (props, id) => {
-    const { stripes: { okapi } } = props;
-    const { url } = okapi;
-    const baseUrl = `${url}/data-import-profiles/profileAssociations/${id}/masters`;
-
-    const response = await fetch(
-      createUrl(baseUrl, { detailType: ASSOCIATION_TYPES[entityKey] }, false),
-      { headers: { ...createOkapiHeaders(okapi) } },
-    );
-    const body = await response.json();
-
-    return get(body, 'childSnapshotWrappers', []);
-  };
-
   const handleProfilesSelect = (associations, confirmationMessage, records, callback) => {
     if (!isMultiLink && !isEmpty(associations)) {
       setMessage(confirmationMessage);
@@ -72,67 +57,31 @@ const FindImportProfile = ({
     }
   };
 
-  const checkMultipleProfilesAssociations = async (records, props) => {
-    setSelectedProfiles(records);
-    const { onSaveMultiple } = props;
-    const linkedProfilesMessages = [];
-    const multiSelectMessage = [];
+  const filterAssociations = associations => (!isEmpty(associations)
+    ? associations.filter(association => association.contentType === parentType)
+    : []);
 
-    // eslint-disable-next-line no-unused-vars
-    for (const record of records) {
-      // eslint-disable-next-line no-await-in-loop
-      const associations = await fetchAssociations(props, record.id);
+  const getMessage = (associations, isSingle) => {
+    const messageContent = [];
 
-      if (!isEmpty(associations)) {
-        const currentProfileName = record.name;
-        const linkedProfileName = get(associations, [0, 'content', 'name']);
-        const linkedProfileType = get(associations, [0, 'contentType']);
-
-        linkedProfilesMessages.push((
-          <SafeHTMLMessage
-            id="ui-plugin-find-import-profile.confirmationModal.linkedProfiles"
-            values={{
-              currentProfileName,
-              profileType: PROFILE_NAMES[entityKey],
-              linkedProfileName,
-              linkedProfileType: PROFILE_NAMES[linkedProfileType],
-            }}
-          />
-        ));
-      }
-    }
-
-    if (!isEmpty(linkedProfilesMessages)) {
-      multiSelectMessage.push(
-        <FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.multiple.body" />,
-        linkedProfilesMessages.map((profile, i) => <p key={i}>{profile}</p>),
+    if (!isEmpty(associations)) {
+      const currentProfileName = profileName ? `"${profileName}"` : '';
+      const linkedProfileName = get(associations, [0, 'content', 'name']);
+      const linkedProfileType = get(associations, [0, 'contentType']);
+      const note = (
         <SafeHTMLMessage
+          key="relink-modal-note"
           id="ui-plugin-find-import-profile.confirmationModal.note"
           tagName="p"
           values={{
             profileType: PROFILE_NAMES[entityKey],
             parentType: PROFILE_NAMES[parentType],
           }}
-        />,
+        />
       );
-    }
-
-    handleProfilesSelect(linkedProfilesMessages, multiSelectMessage, records, onSaveMultiple);
-  };
-
-  const checkProfileAssociations = async (e, record, props) => {
-    setSelectedProfiles([record]);
-    const singleSelectMessage = [];
-    const { onSaveMultiple } = props;
-    const associations = await fetchAssociations(props, record.id);
-
-    if (!isEmpty(associations)) {
-      const currentProfileName = record.name;
-      const linkedProfileName = get(associations, [0, 'content', 'name']);
-      const linkedProfileType = get(associations, [0, 'contentType']);
-
-      singleSelectMessage.push(
+      const singleMessageBody = (
         <SafeHTMLMessage
+          key="relink-modal-single-message-body"
           id="ui-plugin-find-import-profile.confirmationModal.single.body"
           tagName="p"
           values={{
@@ -141,19 +90,47 @@ const FindImportProfile = ({
             profileType: PROFILE_NAMES[entityKey],
             currentProfileName,
           }}
-        />,
+        />
+      );
+      const multipleMessageBody = (
         <SafeHTMLMessage
-          id="ui-plugin-find-import-profile.confirmationModal.note"
+          key="relink-modal-multiple-message-body"
+          id="ui-plugin-find-import-profile.confirmationModal.multiple.body"
           tagName="p"
           values={{
             profileType: PROFILE_NAMES[entityKey],
-            parentType: PROFILE_NAMES[parentType],
+            linkedProfileType: PROFILE_NAMES[linkedProfileType],
+            currentProfileName,
           }}
-        />,
+        />
       );
+      const messageBody = isSingle ? singleMessageBody : multipleMessageBody;
+
+      messageContent.push(messageBody, note);
     }
 
-    handleProfilesSelect(associations, singleSelectMessage, [record], onSaveMultiple);
+    return messageContent;
+  };
+
+  const checkProfilesAssociations = async (records, props) => {
+    setSelectedProfiles(records);
+
+    const {
+      onSaveMultiple,
+      stripes: { okapi },
+    } = props;
+    const isSingleSelected = records.length === 1;
+    const requests = records.map(record => fetchAssociations(okapi, record.id, masterType, parentType, entityKey));
+
+    try {
+      const associations = await Promise.all(requests);
+      const filteredAssociations = filterAssociations(flattenDeep(associations));
+      const confirmationModalMessage = getMessage(filteredAssociations, isSingleSelected);
+
+      handleProfilesSelect(filteredAssociations, confirmationModalMessage, records, onSaveMultiple);
+    } catch (error) {
+      console.error(error); // eslint-disable-line no-console
+    }
   };
 
   return (
@@ -169,11 +146,11 @@ const FindImportProfile = ({
                 {...viewProps}
                 {...modalProps}
                 isMultiSelect={!isSingleSelect}
-                onSelectRow={(e, record) => checkProfileAssociations(e, record, {
+                onSelectRow={(e, record) => checkProfilesAssociations([record], {
                   ...viewProps,
                   ...modalProps,
                 })}
-                onSaveMultiple={selectedRecords => checkMultipleProfilesAssociations(selectedRecords, {
+                onSaveMultiple={selectedRecords => checkProfilesAssociations(selectedRecords, {
                   ...viewProps,
                   ...modalProps,
                 })}
@@ -212,6 +189,8 @@ FindImportProfile.propTypes = {
   dataKey: PropTypes.string.isRequired,
   entityKey: PropTypes.string.isRequired,
   parentType: PropTypes.string.isRequired,
+  masterType: PropTypes.string.isRequired,
+  profileName: PropTypes.string,
   isMultiLink: PropTypes.bool,
   disabled: PropTypes.bool,
   marginBottom0: PropTypes.bool,

@@ -16,6 +16,5 @@
     "confirmationModal.label": "重新链接",
     "confirmationModal.single.body": "本{profileType}已链接到<b> “ {linkedProfileName} ” </b> {linkedProfileType} 。是否要取消与先前{linkedProfileType}的链接并重新链接到此<b> “ {currentProfileName} ” </b> {linkedProfileType}",
     "confirmationModal.multiple.body": "该选定的配置文件已链接到另一个配置文件。",
-    "confirmationModal.linkedProfiles": "<b> “ {currentProfileName} ” </b> {profileType}链接到<b> “ {linkedProfileName} ” </b> {linkedProfileType}",
     "confirmationModal.note": "<b>注意</b>该{profileType}不会重新链接，除非保存{parentType}"
 }

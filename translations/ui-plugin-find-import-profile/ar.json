@@ -16,6 +16,5 @@
     "confirmationModal.label": "إعادة ربط",
     "confirmationModal.single.body": "تم ربط  {profileType}  بالفعل إلى <b>\"{linkedProfileName}\"</b> {linkedProfileType}. هل تريد إلغاء الربط من {linkedProfileType} السابق وإعادة الربط إلى هذا<b>\"{currentProfileName}\" </b>{linkedProfileType}",
     "confirmationModal.multiple.body": "الملفات التعريفية المحددة متصلة بملفات تعريفية أخرى بالفعل",
-    "confirmationModal.linkedProfiles": "<b>\"{currentProfileName}\"</b>  {profileType} متصل بـ <b>\"{linkedProfileName}\"</b> {linkedProfileType}",
     "confirmationModal.note": "<b>لاحظ</b> أنه لن تتم إعادة ربط وضع الإجراء حتى تقوم بحفظ {profileType}"
 }

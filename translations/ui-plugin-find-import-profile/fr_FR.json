@@ -16,5 +16,5 @@
     "confirmationModal.label": "Relier",
     "confirmationModal.single.body": "Ce {profileType} est déjà lié à <b> \" {linkedProfileName} \" </b> {linkedProfileType} . Voulez-vous vous dissocier de l'ancien {linkedProfileType} et le reconnecter à ce <b> \" {currentProfileName} \" </b> {linkedProfileType}",
     "confirmationModal.multiple.body": "One or more of these {profileType}s is already linked to other {linkedProfileType}(s). Do you want to unlink from the previous {linkedProfileType}(s) and relink to this <b>{currentProfileName}</b> {linkedProfileType}?",
-    "confirmationModal.note": "<b> NOTE </b>  le {profileType} ne sera pas lié à nouveau tant que vous n'aurez pas enregistré le {parentType}"
+    "confirmationModal.note": "<b> REMARQUE </b> les {profileType} ne seront pas réassociés tant que vous n'aurez pas enregistré le {parentType} ."
 }

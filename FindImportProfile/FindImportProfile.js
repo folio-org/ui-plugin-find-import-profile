@@ -40,6 +40,7 @@ const FindImportProfile = ({
   onClose,
   isSingleSelect,
   isMultiLink,
+  filterParams,
   ...rest
 }) => {
   const FindImportProfileContainer = profileContainers[entityKey];
@@ -140,7 +141,10 @@ const FindImportProfile = ({
     >
       {modalProps => (
         <>
-          <FindImportProfileContainer entityKey={entityKey}>
+          <FindImportProfileContainer
+            entityKey={entityKey}
+            filterParams={filterParams}
+          >
             {viewProps => (
               <PluginFindRecordModal
                 {...viewProps}
@@ -164,6 +168,7 @@ const FindImportProfile = ({
           <ConfirmationModal
             id="relink-profile"
             confirmLabel={<FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.label" />}
+            bodyTag="div"
             heading={(
               <FormattedMessage
                 id="ui-plugin-find-import-profile.confirmationModal.heading"

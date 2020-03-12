@@ -1,8 +1,13 @@
 # Change history for ui-plugin-find-import-profile
 
 ## **1.2.0** (in progress)
-* Update eslint to v6.2.1 (UIPFIMP-8)
-* Fix wording in relink modal (UIPFIMP-10)
+
+# Features added:
+* Job Profile Tree: Changes needed to support Static value submatches (UIPFIMP-11)
+* Upgrade Stripes and all the dependencies to version 3.0.0 (UIPFIMP-14)
+
+# Bugs fixed:
+* Wording in action profile relink modal is not correct (UIPFIMP-10)
 
 ## [1.1.2](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v1.1.2) (2020-01-03)
 

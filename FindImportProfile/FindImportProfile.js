@@ -195,6 +195,7 @@ FindImportProfile.propTypes = {
   entityKey: PropTypes.string.isRequired,
   parentType: PropTypes.string.isRequired,
   masterType: PropTypes.string.isRequired,
+  filterParams: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   profileName: PropTypes.string,
   isMultiLink: PropTypes.bool,
   disabled: PropTypes.bool,

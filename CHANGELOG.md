@@ -19,4 +19,5 @@
 # New features:
 * Create FindProfiles Plugin Component (UIPFIMP-1)
 * Add Re-Link Warning popup and Linked/Unlinked status into FindProfiles Plugin Component (UIPFIMP-2)
+* Job Profile Tree: Changes needed to support Static value submatches (UIPFIMP-11)
 * Provide default sort order (UIDATIMP-409)

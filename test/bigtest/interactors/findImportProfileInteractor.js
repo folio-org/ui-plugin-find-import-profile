@@ -6,6 +6,7 @@ import {
   clickable,
   is,
   property,
+  text,
 } from '@bigtest/interactor';
 
 import ConfirmationModalInteractor from '@folio/stripes-components/lib/ConfirmationModal/tests/interactor';
@@ -21,6 +22,7 @@ class PluginModalInteractor {
   static defaultScope = '[data-test-find-records-modal]';
 
   instances = collection('[role=group] [role=row]', {
+    name: text('[role=gridcell] [class*="label--"]'),
     click: clickable(),
     selectLine: clickable('input[type="checkbox"]'),
   });

@@ -22,7 +22,7 @@ export class AbstractContainer extends Component {
 
   componentDidMount() {
     this.source = new StripesConnectedSource(this.props, this.logger);
-    this.props.mutator.query.replace('');
+    this.props.mutator.query.update({ sort: 'name' });
   }
 
   componentDidUpdate() {

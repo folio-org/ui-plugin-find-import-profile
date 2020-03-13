@@ -20,6 +20,7 @@ describe('Relink confirmation modal', () => {
 
       beforeEach(async function () {
         this.visit('/dummy');
+        this.server.get('/data-import-profiles/profileAssociations/:id/details', { childSnapshotWrappers: [{ contentType: 'MAPPING_PROFILE' }] });
         await findProfiles.whenLoaded();
         await findProfiles.actionProfileButton.click();
       });
@@ -68,6 +69,7 @@ describe('Relink confirmation modal', () => {
 
       beforeEach(async function () {
         this.visit('/dummy');
+        this.server.get('/data-import-profiles/profileAssociations/:id/details', { childSnapshotWrappers: [{ contentType: 'MAPPING_PROFILE' }] });
         await findProfiles.whenLoaded();
         await findProfiles.actionProfileButton.click();
       });
@@ -128,6 +130,7 @@ describe('Relink confirmation modal', () => {
 
       beforeEach(async function () {
         this.visit('/dummy');
+        this.server.get('/data-import-profiles/profileAssociations/:id/details', { childSnapshotWrappers: [{ contentType: 'MAPPING_PROFILE' }] });
         await findProfiles.whenLoaded();
         await findProfiles.jobProfileButton.click();
       });
@@ -148,6 +151,7 @@ describe('Relink confirmation modal', () => {
 
       beforeEach(async function () {
         this.visit('/dummy');
+        this.server.get('/data-import-profiles/profileAssociations/:id/details', { childSnapshotWrappers: [{ contentType: 'MAPPING_PROFILE' }] });
         await findProfiles.whenLoaded();
         await findProfiles.jobProfileButton.click();
       });
@@ -180,6 +184,7 @@ describe('Relink confirmation modal', () => {
 
       beforeEach(async function () {
         this.visit('/dummy');
+        this.server.get('/data-import-profiles/profileAssociations/:id/masters', { childSnapshotWrappers: [{ contentType: 'JOB_PROFILE' }] });
         await findProfiles.whenLoaded();
         await findProfiles.matchProfileButton.click();
       });
@@ -228,6 +233,7 @@ describe('Relink confirmation modal', () => {
 
       beforeEach(async function () {
         this.visit('/dummy');
+        this.server.get('/data-import-profiles/profileAssociations/:id/masters', { childSnapshotWrappers: [{ contentType: 'JOB_PROFILE' }] });
         await findProfiles.whenLoaded();
         await findProfiles.matchProfileButton.click();
       });
@@ -288,6 +294,7 @@ describe('Relink confirmation modal', () => {
 
       beforeEach(async function () {
         this.visit('/dummy');
+        this.server.get('/data-import-profiles/profileAssociations/:id/masters', { childSnapshotWrappers: [{ contentType: 'ACTION_PROFILE' }] });
         await findProfiles.whenLoaded();
         await findProfiles.mappingProfileButton.click();
       });
@@ -336,6 +343,7 @@ describe('Relink confirmation modal', () => {
 
       beforeEach(async function () {
         this.visit('/dummy');
+        this.server.get('/data-import-profiles/profileAssociations/:id/masters', { childSnapshotWrappers: [{ contentType: 'ACTION_PROFILE' }] });
         await findProfiles.whenLoaded();
         await findProfiles.mappingProfileButton.click();
       });

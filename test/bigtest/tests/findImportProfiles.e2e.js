@@ -221,7 +221,7 @@ describe('Find Import Profiles plugin', function () {
       });
 
       it('should return a set of results', function () {
-        return expect(findProfiles.modal.instances().length).to.be.equal(LESS_LINES_COUNT);
+        return expect(findProfiles.modal.instances().length).to.be.equal(5);
       });
 
       it('should display disabled save button', function () {

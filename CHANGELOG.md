@@ -1,5 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
+## [1.2.2](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v1.2.2) (2020-04-02)
+
+# Bugs fixed:
+* Update @folio/stripes-acq-components dependency and devDependency version
+
 ## [1.2.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v1.2.1) (2020-03-19)
 
 # Bugs fixed:

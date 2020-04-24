@@ -8,7 +8,7 @@
     "modal.footer.save": "Save",
     "modal.footer.close": "Close",
     "modal.footer.totalSelected": "Total selected: {count}",
-    "entities.jobProfiles": "Job Profiles",
+    "entities.jobProfiles": "任務概要",
     "entities.matchProfiles": "Match Profiles",
     "entities.actionProfiles": "Action Profiles",
     "entities.mappingProfiles": "Field Mapping Profiles",

@@ -2,6 +2,9 @@
 
 ## [1.2.2](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v1.2.2) (2020-04-02)
 
+# Features added:
+* Update @folio/stripes-smart-components dependency version (UIDATIMP-485)
+
 # Bugs fixed:
 * Update @folio/stripes-acq-components dependency and devDependency version
 

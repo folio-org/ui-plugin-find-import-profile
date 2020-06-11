@@ -1,5 +1,5 @@
 import { matchProfilesShape } from '@folio/data-import/src/settings/MatchProfiles';
-import { stripesConnect } from '@folio/stripes-core';
+import { stripesConnect } from '@folio/stripes/core';
 
 import { AbstractContainer } from './AbstractContainer';
 

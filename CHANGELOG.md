@@ -1,11 +1,14 @@
 # Change history for ui-plugin-find-import-profile
 
-## **2.0.0** (in progress)
+## [2.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v2.0.0) (2020-06-11)
 
 # Features added:
 * Update to Stripes v4 (UIPFIMP-18)
+* Get rid of "@folio/stripes-core" and "@folio/stripes-smart-components" dependencies
+* Update dependencies versions
 
 # Bugs fixed:
+* Fix tests
 
 ## [1.2.2](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v1.2.2) (2020-04-02)
 

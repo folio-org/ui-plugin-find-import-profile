@@ -21,9 +21,9 @@ const buttonProperties = {
 class PluginModalInteractor {
   static defaultScope = '[data-test-find-records-modal]';
 
-  instances = collection('[role=group] [role=row]', {
+  instances = collection('[role=rowgroup] [role=row]', {
     name: text('[role=gridcell] [class*="label--"]'),
-    click: clickable(),
+    click: clickable('[data-row-inner]'),
     selectLine: clickable('input[type="checkbox"]'),
   });
 

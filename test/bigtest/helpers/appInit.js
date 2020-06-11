@@ -1,4 +1,4 @@
-import setupStripesCore from '@folio/stripes-core/test/bigtest/helpers/setup-application';
+import { setupStripesCore } from '@folio/stripes/core/test';
 import moduleTranslations from '@folio/data-import/translations/ui-data-import/en';
 import translations from '@folio/stripes-acq-components/translations/stripes-acq-components/en';
 import prefixKeys from '@folio/stripes-acq-components/test/bigtest/helpers/prefixKeys';

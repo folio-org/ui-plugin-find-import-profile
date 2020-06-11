@@ -1,5 +1,5 @@
 import { actionProfilesShape } from '@folio/data-import/src/settings/ActionProfiles';
-import { stripesConnect } from '@folio/stripes-core';
+import { stripesConnect } from '@folio/stripes/core';
 
 import { AbstractContainer } from './AbstractContainer';
 

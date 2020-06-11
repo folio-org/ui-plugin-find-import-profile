@@ -1,5 +1,5 @@
 import { mappingProfilesShape } from '@folio/data-import/src/settings/MappingProfiles';
-import { stripesConnect } from '@folio/stripes-core';
+import { stripesConnect } from '@folio/stripes/core';
 
 import { AbstractContainer } from './AbstractContainer';
 

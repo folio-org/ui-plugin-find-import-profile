@@ -1,5 +1,5 @@
 import { jobProfilesShape } from '@folio/data-import/src/settings/JobProfiles';
-import { stripesConnect } from '@folio/stripes-core';
+import { stripesConnect } from '@folio/stripes/core';
 
 import { AbstractContainer } from './AbstractContainer';
 

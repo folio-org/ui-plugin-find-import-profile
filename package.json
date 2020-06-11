@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-import-profile",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "Find and select Data Import Profiles plugin for Stripes",
   "repository": "folio-org/ui-plugin-find-import-profile",
   "publishConfig": {
@@ -31,9 +31,7 @@
     "@bigtest/react": "^0.1.2",
     "@folio/eslint-config-stripes": "^5.0.0",
     "@folio/stripes": "^4.0.0",
-    "@folio/stripes-core": "^4.0.0",
-    "@folio/stripes-smart-components": "^3.1.1",
-    "@folio/stripes-acq-components": "^2.0.2",
+    "@folio/stripes-acq-components": "^2.1.1",
     "babel-eslint": "^10.0.3",
     "babel-polyfill": "^6.26.0",
     "chai": "^4.2.0",

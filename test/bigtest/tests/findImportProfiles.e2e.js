@@ -8,8 +8,9 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-const MORE_LINES_COUNT = 8;
-const LESS_LINES_COUNT = 3;
+const ACTION_PROFILES_COUNT = 8;
+const MATCH_PROFILES_COUNT = 10;
+const JOB_PROFILES_COUNT = 3;
 
 describe('Find Import Profiles plugin', function () {
   const findProfiles = new FindImportProfileInteractor();
@@ -44,7 +45,7 @@ describe('Find Import Profiles plugin', function () {
       });
 
       it('should return a set of results', function () {
-        return expect(findProfiles.modal.instances().length).to.be.equal(MORE_LINES_COUNT);
+        return expect(findProfiles.modal.instances().length).to.be.equal(ACTION_PROFILES_COUNT);
       });
 
       it('should display disabled save button', function () {
@@ -103,7 +104,7 @@ describe('Find Import Profiles plugin', function () {
       });
 
       it('should return a set of results', function () {
-        return expect(findProfiles.modal.instances().length).to.be.equal(LESS_LINES_COUNT);
+        return expect(findProfiles.modal.instances().length).to.be.equal(JOB_PROFILES_COUNT);
       });
 
       it('should display disabled save button', function () {
@@ -162,7 +163,7 @@ describe('Find Import Profiles plugin', function () {
       });
 
       it('should return a set of results', function () {
-        return expect(findProfiles.modal.instances().length).to.be.equal(MORE_LINES_COUNT);
+        return expect(findProfiles.modal.instances().length).to.be.equal(MATCH_PROFILES_COUNT);
       });
 
       it('should display disabled save button', function () {

@@ -1,5 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
+## [2.0.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v2.0.1) (2020-06-18)
+
+### Features added:
+* Update dependencies versions (UIPFIMP-21)
+
 ## [2.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v2.0.0) (2020-06-11)
 
 # Features added:

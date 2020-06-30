@@ -60,6 +60,9 @@
     "react-highlighter": "^0.4.3",
     "redux-form": "^7.0.3"
   },
+  "stripesDeps": [
+    "@folio/stripes-acq-components"
+  ],
   "peerDependencies": {
     "@folio/stripes": "^4.0.0",
     "react": "*",

@@ -14,6 +14,9 @@
     "actsAs": ["plugin"],
     "pluginType": "find-import-profile",
     "displayName": "ui-plugin-find-import-profile.meta.pluginTitle",
+    "stripesDeps": [
+      "@folio/stripes-acq-components"
+    ],
     "okapiInterfaces": {
       "data-import": "3.0",
       "source-manager-job-executions": "1.0",
@@ -60,9 +63,6 @@
     "react-highlighter": "^0.4.3",
     "redux-form": "^7.0.3"
   },
-  "stripesDeps": [
-    "@folio/stripes-acq-components"
-  ],
   "peerDependencies": {
     "@folio/stripes": "^4.0.0",
     "react": "*",

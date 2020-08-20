@@ -1,6 +1,6 @@
 # Change history for ui-plugin-find-import-profile
 
-## **2.0.2** (in progress)
+## **3.0.0** (in progress)
 
 ### Features added:
 * Handle import of stripes-acq-components to modules and platform (UISACQCOMP-3)

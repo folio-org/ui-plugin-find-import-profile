@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-import-profile",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Find and select Data Import Profiles plugin for Stripes",
   "repository": "folio-org/ui-plugin-find-import-profile",
   "publishConfig": {
@@ -34,7 +34,7 @@
     "@bigtest/mocha": "^0.5.2",
     "@bigtest/react": "^0.1.2",
     "@folio/eslint-config-stripes": "^5.0.0",
-    "@folio/stripes": "^4.0.0",
+    "@folio/stripes": "^5.0.0",
     "babel-eslint": "^10.0.3",
     "babel-polyfill": "^6.26.0",
     "chai": "^4.2.0",
@@ -51,12 +51,12 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intl": "^4.5.1",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "sinon": "^7.2.2"
   },
   "dependencies": {
-    "@folio/data-import": "^2.0.0",
+    "@folio/data-import": "^3.0.0",
     "@folio/stripes-acq-components": "^2.1.1",
     "classnames": "^2.2.5",
     "lodash": "^4.16.4",
@@ -66,10 +66,10 @@
     "redux-form": "^7.0.3"
   },
   "peerDependencies": {
-    "@folio/stripes": "^4.0.0",
+    "@folio/stripes": "^5.0.0",
     "react": "*",
     "react-intl": "^4.5.1",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   }
 }

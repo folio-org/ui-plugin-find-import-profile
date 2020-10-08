@@ -66,6 +66,7 @@ export class AbstractContainer extends Component {
       searchTerm: '',
       selectRecord: null,
       selectedRecords: [],
+      resources,
     });
 
     if (this.source) {

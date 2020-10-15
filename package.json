@@ -50,14 +50,14 @@
     "query-string": "^5.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-intl": "^4.5.1",
+    "react-intl": "^5.7.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "sinon": "^7.2.2"
   },
   "dependencies": {
     "@folio/data-import": "^3.0.0",
-    "@folio/stripes-acq-components": "^2.1.1",
+    "@folio/stripes-acq-components": ">=2.2.0",
     "classnames": "^2.2.5",
     "lodash": "^4.16.4",
     "prop-types": "^15.6.0",
@@ -68,7 +68,7 @@
   "peerDependencies": {
     "@folio/stripes": "^5.0.0",
     "react": "*",
-    "react-intl": "^4.5.1",
+    "react-intl": "^5.7.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   }

@@ -8,7 +8,7 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-const ACTION_PROFILES_COUNT = 8;
+const ACTION_PROFILES_COUNT = 6;
 const MATCH_PROFILES_COUNT = 10;
 const JOB_PROFILES_COUNT = 3;
 

@@ -1,7 +1,8 @@
-import { camelize } from '@bigtest/mirage';
+import {
+  camelize,
+  underscore,
+} from 'inflected';
 
-// auto-import all mirage submodules
-// const req = require.context('../../../node_modules/@folio/data-import/test/bigtest/network', true, /\.js$/);
 const req = require.context('@folio/data-import/test/bigtest/network', true, /\.js$/);
 
 const modules = req.keys().reduce((acc, modulePath) => {
@@ -10,7 +11,7 @@ const modules = req.keys().reduce((acc, modulePath) => {
   if (moduleType === 'configs') return acc;
 
   if (moduleName) {
-    const moduleKey = camelize(moduleName.replace('.js', ''));
+    const moduleKey = camelize(underscore(moduleName.replace('.js', '')), false);
 
     return Object.assign(acc, {
       [moduleType]: {

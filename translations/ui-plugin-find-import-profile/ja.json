@@ -6,7 +6,7 @@
     "pluggable.errors.plugin.disabled": "No plugin available!",
     "modal.title": "Select {profileType}",
     "modal.footer.save": "保存",
-    "modal.footer.close": "Close",
+    "modal.footer.close": "閉じる",
     "modal.footer.totalSelected": "選択済合計： {count}",
     "entities.jobProfiles": "ジョブ・プロファイル",
     "entities.matchProfiles": "マッチ・プロファイル",

@@ -5,6 +5,7 @@
 ### Features added:
 * Handle import of stripes-acq-components to modules and platform (UISACQCOMP-3)
 * Update dependencies versions
+* Reuse utils from `data-transfer-components` rep (UIPFIMP-24)
 
 ## [2.0.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v2.0.1) (2020-06-18)
 

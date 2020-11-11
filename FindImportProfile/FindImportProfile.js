@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-
+import SafeHTMLMessage from '@folio/react-intl-safe-html';
 import {
   get,
   isEmpty,
@@ -9,12 +9,11 @@ import {
   flattenDeep,
 } from 'lodash';
 
+import { ConfirmationModal } from '@folio/stripes/components';
 import {
   PluginFindRecord,
   PluginFindRecordModal,
 } from '@folio/stripes-acq-components';
-import { ConfirmationModal } from '@folio/stripes-components';
-import SafeHTMLMessage from '@folio/react-intl-safe-html';
 
 import {
   ENTITY_KEYS,

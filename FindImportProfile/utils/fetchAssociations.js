@@ -2,7 +2,7 @@ import { get } from 'lodash';
 import {
   createOkapiHeaders,
   createUrl,
-} from '@folio/data-import/src/utils';
+} from '@folio/stripes-data-transfer-components';
 import { ASSOCIATION_TYPES } from '@folio/data-import/src/utils/constants';
 
 /**

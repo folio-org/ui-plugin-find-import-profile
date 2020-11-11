@@ -17,7 +17,8 @@
     "pluginType": "find-import-profile",
     "displayName": "ui-plugin-find-import-profile.meta.pluginTitle",
     "stripesDeps": [
-      "@folio/stripes-acq-components"
+      "@folio/stripes-acq-components",
+      "@folio/stripes-data-transfer-components"
     ],
     "okapiInterfaces": {
       "data-import": "3.0",
@@ -57,7 +58,9 @@
   },
   "dependencies": {
     "@folio/data-import": "^3.0.0",
+    "@folio/react-intl-safe-html": "^2.0.0",
     "@folio/stripes-acq-components": ">=2.2.0",
+    "@folio/stripes-data-transfer-components": "^3.0.0",
     "classnames": "^2.2.5",
     "lodash": "^4.16.4",
     "prop-types": "^15.6.0",

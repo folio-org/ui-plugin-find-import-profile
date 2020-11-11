@@ -13,7 +13,10 @@ export default function appInit({
   hasAllPerms = true,
 } = {}) {
   setupStripesCore({
-    mirageOptions,
+    mirageOptions: {
+      serverType: 'miragejs',
+      ...mirageOptions,
+    },
     scenarios,
     stripesConfig: { hasAllPerms },
 

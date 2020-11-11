@@ -1,11 +1,14 @@
 # Change history for ui-plugin-find-import-profile
 
-## **3.0.0** (in progress)
+## **3.1.0** (in progress)
+
+## [3.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v3.0.0) (2020-10-15)
 
 ### Features added:
 * Handle import of stripes-acq-components to modules and platform (UISACQCOMP-3)
 * Update dependencies versions
 * Reuse utils from `data-transfer-components` rep (UIPFIMP-24)
+* Refactor from `bigtest/mirage` to `miragejs`
 
 ## [2.0.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v2.0.1) (2020-06-18)
 

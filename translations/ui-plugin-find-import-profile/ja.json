@@ -1,10 +1,10 @@
 {
     "meta.title": "{profileType}",
     "meta.pluginTitle": "Test Find Profile Plugin",
-    "addProfile": "Add {profileType}",
+    "addProfile": "{profileType}を追加",
     "pluggable.caption": "Pick Profile",
     "pluggable.errors.plugin.disabled": "No plugin available!",
-    "modal.title": "Select {profileType}",
+    "modal.title": "{profileType}を選択",
     "modal.footer.save": "保存",
     "modal.footer.close": "閉じる",
     "modal.footer.totalSelected": "選択済合計： {count}",

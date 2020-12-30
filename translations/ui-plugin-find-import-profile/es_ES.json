@@ -15,6 +15,6 @@
     "confirmationModal.heading": "Volver a vincular {profileType} ?",
     "confirmationModal.label": "Volver a vincular",
     "confirmationModal.single.body": "Este {profileType} ya está vinculado a <b> \" {linkedProfileName} \" </b> {linkedProfileType} . ¿Desea desvincularse del {linkedProfileType} y volver a vincular a este <b> \" {currentProfileName} \" </b> {linkedProfileType}",
-    "confirmationModal.multiple.body": "One or more of these {profileType}s is already linked to other {linkedProfileType}(s). Do you want to unlink from the previous {linkedProfileType}(s) and relink to this <b>{currentProfileName}</b> {linkedProfileType}?",
+    "confirmationModal.multiple.body": "Estos perfiles seleccionados ya están vinculados a otros perfiles.",
     "confirmationModal.note": "<b> NOTA </b> que {profileType} no se volverá a vincular hasta que guarde {parentType}"
 }

@@ -1,6 +1,8 @@
 # Change history for ui-plugin-find-import-profile
 
-## **3.1.0** (in progress)
+## **4.0.0** (in progress)
+### Features added:
+* Update stripes to v6 (UIPFIMP-29)
 
 ## [3.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v3.0.0) (2020-10-15)
 

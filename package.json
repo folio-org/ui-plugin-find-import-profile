@@ -35,7 +35,7 @@
     "@bigtest/mocha": "^0.5.2",
     "@bigtest/react": "^0.1.2",
     "@folio/eslint-config-stripes": "^5.0.0",
-    "@folio/stripes": "^5.0.0",
+    "@folio/stripes": "^6.0.0",
     "babel-eslint": "^10.0.3",
     "babel-polyfill": "^6.26.0",
     "chai": "^4.2.0",
@@ -66,10 +66,10 @@
     "prop-types": "^15.6.0",
     "react-dropzone": "^7.0.1",
     "react-highlighter": "^0.4.3",
-    "redux-form": "^7.0.3"
+    "redux-form": "^8.3.7"
   },
   "peerDependencies": {
-    "@folio/stripes": "^5.0.0",
+    "@folio/stripes": "^6.0.0",
     "react": "*",
     "react-intl": "^5.7.0",
     "react-router": "^5.2.0",

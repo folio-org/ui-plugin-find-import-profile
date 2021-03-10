@@ -4,6 +4,7 @@
 ### Features added:
 * Update stripes to v6 (UIPFIMP-29)
 * Update stripes-cli to v2 (UIPFIMP-32)
+* Add personal data disclosure form (UIPFIMP-25)
 
 ## [3.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v3.0.0) (2020-10-15)
 

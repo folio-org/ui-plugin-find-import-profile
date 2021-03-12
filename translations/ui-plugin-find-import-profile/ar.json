@@ -8,7 +8,7 @@
     "modal.footer.save": "حفظ",
     "modal.footer.close": "إغلاق",
     "modal.footer.totalSelected": "إجمالي المحدد: {count}",
-    "entities.jobProfiles": "أوضاع الوظائف",
+    "entities.jobProfiles": "بروفايلات المهام",
     "entities.matchProfiles": "أوضاع المطابقة",
     "entities.actionProfiles": "أوضاع الإجراءات",
     "entities.mappingProfiles": "أوضاع تخطيط الحقل",
@@ -16,5 +16,5 @@
     "confirmationModal.label": "إعادة ربط",
     "confirmationModal.single.body": "تم ربط  {profileType}  بالفعل إلى <b>\"{linkedProfileName}\"</b> {linkedProfileType}. هل تريد إلغاء الربط من {linkedProfileType} السابق وإعادة الربط إلى هذا<b>\"{currentProfileName}\" </b>{linkedProfileType}؟",
     "confirmationModal.multiple.body": "تم ربط أحد هذه {profileType} أو أكثر إلى {linkedProfileType} أخرى. هل تريد إلغاء ربطها من {linkedProfileType} السابقة وإعادة ربطها إلى هذه <b>{currentProfileName}</b> {linkedProfileType}؟",
-    "confirmationModal.note": "<b>لاحظ</b> أنه لن تتم إعادة ربط وضع الإجراء{profileType} حتى تقوم بحفظ {parentType}."
+    "confirmationModal.note": "<b>لاحظ</b> أنه لن تتم إعادة ربط بروفايل الإجراء{profileType} حتى تقوم بحفظ {parentType}."
 }

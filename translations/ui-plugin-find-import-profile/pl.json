@@ -12,7 +12,7 @@
     "entities.matchProfiles": "Profile dopasowania",
     "entities.actionProfiles": "Profile akcji",
     "entities.mappingProfiles": "Profile mapowania pól",
-    "confirmationModal.heading": "Połączyć ponownie {profilType}?",
+    "confirmationModal.heading": "Połączyć ponownie {profileType}?",
     "confirmationModal.label": "Połącz ponownie",
     "confirmationModal.single.body": "Ten {profileType} jest już połączony z <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Czy chcesz odłączyć od poprzedniego {linkedProfileType} i ponownie połączyć się z tym <b>{currentProfileName}</b> {linkedProfileType}?",
     "confirmationModal.multiple.body": "Co najmniej jeden z tych elementów typu {profileType} jest już powiązany z innymi {linkedProfileType}. Czy chcesz odłączyć się od poprzednich {linkedProfileType} i ponownie połączyć z tym <b> {currentProfileName} </b> {linkedProfileType} ?",

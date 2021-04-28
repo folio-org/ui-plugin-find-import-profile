@@ -29,7 +29,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "stripes test karma",
-    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-data-import ./translations/ui-data-import/compiled"
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-plugin-find-import-profile ./translations/ui-plugin-find-import-profile/compiled"
   },
   "devDependencies": {
     "@bigtest/interactor": "^0.9.1",

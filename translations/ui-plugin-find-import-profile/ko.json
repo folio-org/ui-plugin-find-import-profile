@@ -7,7 +7,7 @@
     "modal.title": "{profileType} 선택",
     "modal.footer.save": "저장",
     "modal.footer.close": "닫기",
-    "modal.footer.totalSelected": "선택한 총: {수}",
+    "modal.footer.totalSelected": "Total selected: {count}",
     "entities.jobProfiles": "작업 프로파일",
     "entities.matchProfiles": "매치 프로파일",
     "entities.actionProfiles": "작업 프로파일",

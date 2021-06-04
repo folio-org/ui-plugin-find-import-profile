@@ -4,6 +4,7 @@
 
 ### Features added:
 * Compile Translation Files into AST Format (UIPFIMP-33)
+* Update version of interfaces due to supporting MARC Authority records (UIPFIMP-38)
 
 ## [4.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v4.0.0) (2021-03-19)
 

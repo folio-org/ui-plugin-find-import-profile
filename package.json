@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-import-profile",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Find and select Data Import Profiles plugin for Stripes",
   "repository": "folio-org/ui-plugin-find-import-profile",
   "publishConfig": {
@@ -22,7 +22,7 @@
     ],
     "okapiInterfaces": {
       "data-import": "3.0",
-      "source-manager-job-executions": "2.0",
+      "source-manager-job-executions": "1.0 2.0",
       "data-import-converter-storage": "1.2"
     }
   },

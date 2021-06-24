@@ -2,6 +2,9 @@
 
 ## **4.2.0** (in progress)
 
+### Features added:
+* Refactor away from react-intl-safe-html (UIPFIMP-37)
+
 ## [4.1.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v4.0.0) (2021-06-17)
 
 ### Features added:

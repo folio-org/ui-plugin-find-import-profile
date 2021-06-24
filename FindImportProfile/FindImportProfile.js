@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import SafeHTMLMessage from '@folio/react-intl-safe-html';
 import {
   get,
   isEmpty,
@@ -69,7 +68,7 @@ const FindImportProfile = ({
       const linkedProfileName = get(associations, [0, 'content', 'name']);
       const linkedProfileType = get(associations, [0, 'contentType']);
       const note = (
-        <SafeHTMLMessage
+        <FormattedMessage
           key="relink-modal-note"
           id="ui-plugin-find-import-profile.confirmationModal.note"
           tagName="p"
@@ -80,7 +79,7 @@ const FindImportProfile = ({
         />
       );
       const singleMessageBody = (
-        <SafeHTMLMessage
+        <FormattedMessage
           key="relink-modal-single-message-body"
           id="ui-plugin-find-import-profile.confirmationModal.single.body"
           tagName="p"
@@ -93,7 +92,7 @@ const FindImportProfile = ({
         />
       );
       const multipleMessageBody = (
-        <SafeHTMLMessage
+        <FormattedMessage
           key="relink-modal-multiple-message-body"
           id="ui-plugin-find-import-profile.confirmationModal.multiple.body"
           tagName="p"

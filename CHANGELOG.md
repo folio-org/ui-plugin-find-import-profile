@@ -1,11 +1,12 @@
 # Change history for ui-plugin-find-import-profile
 
-## **4.2.0** (in progress)
+## **5.0.0** (in progress)
 
 ### Features added:
 * Refactor away from react-intl-safe-html (UIPFIMP-37)
+* increment stripes to v7 (UIPFIMP-39)
 
-## [4.1.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v4.0.0) (2021-06-17)
+## [4.1.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v4.1.0) (2021-06-17)
 
 ### Features added:
 * Compile Translation Files into AST Format (UIPFIMP-33)

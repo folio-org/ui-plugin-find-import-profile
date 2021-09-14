@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "@folio/data-import": "^5.0.0",
-    "@folio/stripes-acq-components": "~2.3.0",
+    "@folio/stripes-acq-components": "~3.0.0",
     "@folio/stripes-data-transfer-components": "^4.0.0",
     "classnames": "^2.2.5",
     "lodash": "^4.16.4",

@@ -44,15 +44,41 @@ const FindImportProfile = ({
   const FindImportProfileContainer = profileContainers[entityKey];
 
   const [isModalOpen, showModal] = useState(false);
+  const [isLinkingAllowed, setIsLinkingAllowed] = useState(false);
   const [selectedProfiles, setSelectedProfiles] = useState([]);
-  const [message, setMessage] = useState([]);
+  const [confirmationLabel, setConfirmationLabel] = useState(null);
+  const [confirmationHeading, setConfirmationHeading] = useState(null);
+  const [confirmationMessage, setConfirmationMessage] = useState([]);
 
-  const handleProfilesSelect = (associations, confirmationMessage, records, callback) => {
+  const handleProfilesSelect = (associations, confirmationModalMessage, records, callback) => {
+    setIsLinkingAllowed(true);
+
     if (!isMultiLink && !isEmpty(associations)) {
-      setMessage(confirmationMessage);
+      setConfirmationMessage(confirmationModalMessage);
       showModal(true);
     } else {
       callback(records);
+    }
+  };
+
+  const handleAttachingToJobProfile = (associations, records, onSave) => {
+    setIsLinkingAllowed(false);
+
+    const confirmationModalMessage = (
+      <FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.notAttached.body" />
+    );
+    const confirmLabel = <FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.ok" />;
+    const confirmHeading = (
+      <FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.notAttached.heading" />
+    );
+
+    if (isEmpty(flattenDeep(associations))) {
+      setConfirmationHeading(confirmHeading);
+      setConfirmationLabel(confirmLabel);
+      setConfirmationMessage(confirmationModalMessage);
+      showModal(true);
+    } else {
+      onSave(records);
     }
   };
 
@@ -123,10 +149,25 @@ const FindImportProfile = ({
 
     try {
       const associations = await Promise.all(requests);
-      const filteredAssociations = filterAssociations(flattenDeep(associations));
-      const confirmationModalMessage = getMessage(filteredAssociations, isSingleSelected);
 
-      handleProfilesSelect(filteredAssociations, confirmationModalMessage, records, onSaveMultiple);
+      if (parentType === ENTITY_KEYS.JOB_PROFILES) {
+        handleAttachingToJobProfile(associations, records, onSaveMultiple);
+      } else {
+        const filteredAssociations = filterAssociations(flattenDeep(associations));
+        const confirmationModalMessage = getMessage(filteredAssociations, isSingleSelected);
+        const confirmLabel = <FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.label" />;
+        const confirmHeading = (
+          <FormattedMessage
+            id="ui-plugin-find-import-profile.confirmationModal.heading"
+            values={{ profileType: PROFILE_NAMES[entityKey] }}
+          />
+        );
+
+        setConfirmationHeading(confirmHeading);
+        setConfirmationLabel(confirmLabel);
+
+        handleProfilesSelect(filteredAssociations, confirmationModalMessage, records, onSaveMultiple);
+      }
     } catch (error) {
       console.error(error); // eslint-disable-line no-console
     }
@@ -165,19 +206,16 @@ const FindImportProfile = ({
           </FindImportProfileContainer>
           <ConfirmationModal
             id="relink-profile"
-            confirmLabel={<FormattedMessage id="ui-plugin-find-import-profile.confirmationModal.label" />}
+            confirmLabel={confirmationLabel}
             bodyTag="div"
-            heading={(
-              <FormattedMessage
-                id="ui-plugin-find-import-profile.confirmationModal.heading"
-                values={{ profileType: PROFILE_NAMES[entityKey] }}
-              />
-            )}
-            message={message}
+            heading={confirmationHeading}
+            message={confirmationMessage}
             onCancel={() => showModal(false)}
             onConfirm={() => {
               showModal(false);
-              onLink(selectedProfiles);
+              if (isLinkingAllowed) {
+                onLink(selectedProfiles);
+              }
               modalProps.closeModal();
             }}
             open={isModalOpen}

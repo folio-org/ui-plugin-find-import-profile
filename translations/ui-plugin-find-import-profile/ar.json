@@ -16,5 +16,8 @@
     "confirmationModal.label": "إعادة ربط",
     "confirmationModal.single.body": "تم ربط  {profileType}  بالفعل إلى <b>\"{linkedProfileName}\"</b> {linkedProfileType}. هل تريد إلغاء الربط من {linkedProfileType} السابق وإعادة الربط إلى هذا<b>\"{currentProfileName}\" </b>{linkedProfileType}؟",
     "confirmationModal.multiple.body": "تم ربط أحد هذه {profileType} أو أكثر إلى {linkedProfileType} أخرى. هل تريد إلغاء ربطها من {linkedProfileType} السابقة وإعادة ربطها إلى هذه <b>{currentProfileName}</b> {linkedProfileType}؟",
-    "confirmationModal.note": "<b>لاحظ</b> أنه لن تتم إعادة ربط بروفايل الإجراء{profileType} حتى تقوم بحفظ {parentType}."
+    "confirmationModal.note": "<b>لاحظ</b> أنه لن تتم إعادة ربط بروفايل الإجراء{profileType} حتى تقوم بحفظ {parentType}.",
+    "confirmationModal.ok": "OK",
+    "confirmationModal.notAttached.heading": "Action profile not attached",
+    "confirmationModal.notAttached.body": "You must link a field mapping profile to the action profile before assigning the action profile to a job profile"
 }

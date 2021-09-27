@@ -150,7 +150,7 @@ const FindImportProfile = ({
     try {
       const associations = await Promise.all(requests);
 
-      if (parentType === ENTITY_KEYS.JOB_PROFILES) {
+      if (parentType === ENTITY_KEYS.JOB_PROFILES && entityKey === ENTITY_KEYS.ACTION_PROFILES) {
         handleAttachingToJobProfile(associations, records, onSaveMultiple);
       } else {
         const filteredAssociations = filterAssociations(flattenDeep(associations));

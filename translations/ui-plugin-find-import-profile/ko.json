@@ -16,5 +16,8 @@
     "confirmationModal.label": "다시 연결",
     "confirmationModal.single.body": "이 {profileType} 은 이미 <b> \" {linkedProfileName} \" </b> {linkedProfileType} 에 연결되어 있습니다. 이전 {linkedProfileType} 에서 연결을 해제하고 이 <b> {currentProfileName} </b> {linkedProfileType} 에 다시 연결 하시겠습니까?",
     "confirmationModal.multiple.body": "이 {profileType} 중 하나 이상이 이미 다른 {linkedProfileType} 에 연결되어 있습니다. 이전 {linkedProfileType} 에서 연결을 해제하고 이 <b> {currentProfileName} </b> {linkedProfileType} 을 다시 연결하시겠습니까?",
-    "confirmationModal.note": "<b> 참고 </b> {parentType} 를) 저장할 때까지 {profileType} 은 다시 연결되지 않습니다."
+    "confirmationModal.note": "<b> 참고 </b> {parentType} 를) 저장할 때까지 {profileType} 은 다시 연결되지 않습니다.",
+    "confirmationModal.ok": "OK",
+    "confirmationModal.notAttached.heading": "Action profile not attached",
+    "confirmationModal.notAttached.body": "You must link a field mapping profile to the action profile before assigning the action profile to a job profile"
 }

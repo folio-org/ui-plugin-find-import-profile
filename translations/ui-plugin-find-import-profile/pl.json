@@ -16,5 +16,8 @@
     "confirmationModal.label": "Połącz ponownie",
     "confirmationModal.single.body": "Ten {profileType} jest już połączony z <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Czy chcesz odłączyć od poprzedniego {linkedProfileType} i ponownie połączyć się z tym <b>{currentProfileName}</b> {linkedProfileType}?",
     "confirmationModal.multiple.body": "Co najmniej jeden z tych elementów typu {profileType} jest już powiązany z innymi {linkedProfileType}. Czy chcesz odłączyć się od poprzednich {linkedProfileType} i ponownie połączyć z tym <b> {currentProfileName} </b> {linkedProfileType} ?",
-    "confirmationModal.note": "<b>UWAGA</b>: {profileType}(y) nie zostaną połączone, dopóki nie zapiszesz {parentType}."
+    "confirmationModal.note": "<b>UWAGA</b>: {profileType}(y) nie zostaną połączone, dopóki nie zapiszesz {parentType}.",
+    "confirmationModal.ok": "OK",
+    "confirmationModal.notAttached.heading": "Action profile not attached",
+    "confirmationModal.notAttached.body": "You must link a field mapping profile to the action profile before assigning the action profile to a job profile"
 }

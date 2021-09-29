@@ -33,6 +33,7 @@ const FindImportProfile = ({
   entityKey,
   parentType,
   masterType,
+  profileType,
   profileName,
   onLink,
   onClose,
@@ -150,7 +151,7 @@ const FindImportProfile = ({
     try {
       const associations = await Promise.all(requests);
 
-      if (parentType === ENTITY_KEYS.JOB_PROFILES && entityKey === ENTITY_KEYS.ACTION_PROFILES) {
+      if (profileType === ENTITY_KEYS.JOB_PROFILES && entityKey === ENTITY_KEYS.ACTION_PROFILES) {
         handleAttachingToJobProfile(associations, records, onSaveMultiple);
       } else {
         const filteredAssociations = filterAssociations(flattenDeep(associations));
@@ -231,6 +232,7 @@ FindImportProfile.propTypes = {
   entityKey: PropTypes.string.isRequired,
   parentType: PropTypes.string.isRequired,
   masterType: PropTypes.string.isRequired,
+  profileType: PropTypes.string.isRequired,
   filterParams: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   profileName: PropTypes.string,
   isMultiLink: PropTypes.bool,

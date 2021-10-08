@@ -2,6 +2,8 @@
 
 ## **5.0.0** (in progress)
 
+## [5.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.0.0) (2021-10-08)
+
 ### Features added:
 * Refactor away from react-intl-safe-html (UIPFIMP-37)
 * increment stripes to v7 (UIPFIMP-39)

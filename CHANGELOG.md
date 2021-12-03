@@ -3,7 +3,8 @@
 ## **5.0.1** (in progress)
 
 ### Features added:
-* Cover <FindImportProfile> component with tests (UIPFIMP-42)
+* Cover `<FindImportProfile>` component with tests (UIPFIMP-42)
+* Cover `<FindImportProfileContainer>` container with tests (UIPFIMP-44)
 
 ## [5.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.0.0) (2021-10-08)
 

@@ -8,7 +8,8 @@ import { expect } from 'chai';
 import appInit from '../helpers/appInit';
 import FindImportProfileInteractor from '../interactors/findImportProfileInteractor';
 
-describe('Relink confirmation modal', () => {
+// eslint-disable-next-line no-only-tests/no-only-tests
+describe.skip('Relink confirmation modal', () => {
   const findProfiles = new FindImportProfileInteractor();
 
   describe('For action profiles', () => {

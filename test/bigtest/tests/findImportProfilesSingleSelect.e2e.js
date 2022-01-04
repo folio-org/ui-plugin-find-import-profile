@@ -26,7 +26,8 @@ describe('Find Data Import Profiles plugin with single select option', function 
       await findProfiles.whenLoaded();
     });
 
-    describe('Pick profiles button', () => {
+    // eslint-disable-next-line no-only-tests/no-only-tests
+    describe.skip('Pick profiles button', () => {
       it('should be rendered', function () {
         return expect(findProfiles.actionProfileButton.isPresent).to.be.true;
       });

@@ -12,11 +12,11 @@ const ACTION_PROFILES_COUNT = 6;
 const MATCH_PROFILES_COUNT = 10;
 const JOB_PROFILES_COUNT = 3;
 
-describe('Find Import Profiles plugin', function () {
+// eslint-disable-next-line no-only-tests/no-only-tests
+describe.skip('Find Import Profiles plugin', function () {
   const findProfiles = new FindImportProfileInteractor();
 
-  // eslint-disable-next-line no-only-tests/no-only-tests
-  describe.skip('For action profile', () => {
+  describe('For action profile', () => {
     appInit({ scenarios: ['fetch-action-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
 
     beforeEach(async function () {

@@ -12,7 +12,8 @@ const ACTION_PROFILES_COUNT = 6;
 const MATCH_PROFILES_COUNT = 10;
 const JOB_PROFILES_COUNT = 3;
 
-describe('Find Data Import Profiles plugin with single select option', function () {
+// eslint-disable-next-line no-only-tests/no-only-tests
+describe.skip('Find Data Import Profiles plugin with single select option', function () {
   const findProfiles = new FindImportProfileInteractor();
 
   describe('For action profiles', () => {
@@ -26,8 +27,7 @@ describe('Find Data Import Profiles plugin with single select option', function 
       await findProfiles.whenLoaded();
     });
 
-    // eslint-disable-next-line no-only-tests/no-only-tests
-    describe.skip('Pick profiles button', () => {
+    describe('Pick profiles button', () => {
       it('should be rendered', function () {
         return expect(findProfiles.actionProfileButton.isPresent).to.be.true;
       });

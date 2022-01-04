@@ -15,7 +15,8 @@ const JOB_PROFILES_COUNT = 3;
 describe('Find Import Profiles plugin', function () {
   const findProfiles = new FindImportProfileInteractor();
 
-  describe('For action profile', () => {
+  // eslint-disable-next-line no-only-tests/no-only-tests
+  describe.skip('For action profile', () => {
     appInit({ scenarios: ['fetch-action-profiles-success', 'fetch-users', 'fetch-tags', 'tags-enabled'] });
 
     beforeEach(async function () {
@@ -23,8 +24,7 @@ describe('Find Import Profiles plugin', function () {
       await findProfiles.whenLoaded();
     });
 
-    // eslint-disable-next-line no-only-tests/no-only-tests
-    describe.skip('Pick Profiles button', () => {
+    describe('Pick Profiles button', () => {
       it('should be rendered', function () {
         return expect(findProfiles.actionProfileButton.isPresent).to.be.true;
       });

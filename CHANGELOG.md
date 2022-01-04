@@ -1,6 +1,6 @@
 # Change history for ui-plugin-find-import-profile
 
-## **5.0.1** (in progress)
+## **5.1.0** (in progress)
 
 ### Features added:
 * Cover `<FindImportProfile>` component with tests (UIPFIMP-42)

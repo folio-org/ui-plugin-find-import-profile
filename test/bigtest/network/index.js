@@ -3,7 +3,7 @@ import {
   underscore,
 } from 'inflected';
 
-const req = require.context('@folio/data-import/test/bigtest/network', true, /\.js$/);
+const req = require.context('@folio/data-import/test/bigtest/network', true, /\.\/.*\.js$/);
 
 const modules = req.keys().reduce((acc, modulePath) => {
   const [, moduleType, moduleName] = modulePath.split('/');

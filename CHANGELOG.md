@@ -1,6 +1,8 @@
 # Change history for ui-plugin-find-import-profile
 
-## **5.1.0** (in progress)
+## **5.2.0** (in progress)
+
+## [5.1.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.1.0) (2022-03-04)
 
 ### Features added:
 * Cover `<FindImportProfile>` component with tests (UIPFIMP-42)

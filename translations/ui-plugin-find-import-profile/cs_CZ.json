@@ -18,6 +18,6 @@
     "confirmationModal.multiple.body": "One or more of these {profileType}s is already linked to other {linkedProfileType}(s). Do you want to unlink from the previous {linkedProfileType}(s) and relink to this <b>{currentProfileName}</b> {linkedProfileType}?",
     "confirmationModal.note": "<b>NOTE</b> that the {profileType}(s) will not be relinked until you save the {parentType}.",
     "confirmationModal.ok": "OK",
-    "confirmationModal.notAttached.heading": "Action profile not attached",
-    "confirmationModal.notAttached.body": "You must link a field mapping profile to the action profile before assigning the action profile to a job profile"
+    "confirmationModal.notAttached.heading": "Profil akce není připojen",
+    "confirmationModal.notAttached.body": "Před přiřazením profilu akce k profilu úlohy je nutné propojit profil mapování polí s profilem akce"
 }

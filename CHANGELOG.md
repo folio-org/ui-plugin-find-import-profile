@@ -2,6 +2,9 @@
 
 ## **5.2.0** (in progress)
 
+### Features added:
+* Replace babel-eslint with @babel/eslint-parser (UIPFIMP-48)
+
 ## [5.1.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.1.0) (2022-03-04)
 
 ### Features added:

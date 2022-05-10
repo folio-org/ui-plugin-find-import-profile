@@ -1,9 +1,9 @@
 {
     "meta.title": "{profileType}",
-    "meta.pluginTitle": "Test Find Profile Plugin",
+    "meta.pluginTitle": "Test pluginu Najít profil",
     "addProfile": "Add {profileType}",
     "pluggable.caption": "Pick Profile",
-    "pluggable.errors.plugin.disabled": "No plugin available!",
+    "pluggable.errors.plugin.disabled": "Žádný plugin není k dispozici!",
     "modal.title": "Select {profileType}",
     "modal.footer.save": "Save",
     "modal.footer.close": "Close",

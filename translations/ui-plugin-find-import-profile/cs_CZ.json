@@ -15,7 +15,7 @@
     "confirmationModal.heading": "Relink {profileType}?",
     "confirmationModal.label": "Relink",
     "confirmationModal.single.body": "This {profileType} is already linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Do you want to unlink from the previous {linkedProfileType} and relink to this <b>{currentProfileName}</b> {linkedProfileType}?",
-    "confirmationModal.multiple.body": "One or more of these {profileType}s is already linked to other {linkedProfileType}(s). Do you want to unlink from the previous {linkedProfileType}(s) and relink to this <b>{currentProfileName}</b> {linkedProfileType}?",
+    "confirmationModal.multiple.body": "Jeden nebo více z těchto {profileType} je již propojen s jinými {linkedProfileType}. Chcete zrušit propojení s předchozími {linkedProfileType} a znovu vytvořit odkaz na tento <b>{currentProfileName}</b> {linkedProfileType}?",
     "confirmationModal.note": "<b>NOTE</b> that the {profileType}(s) will not be relinked until you save the {parentType}.",
     "confirmationModal.ok": "OK",
     "confirmationModal.notAttached.heading": "Profil akce není připojen",

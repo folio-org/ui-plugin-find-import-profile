@@ -1,6 +1,6 @@
 {
     "meta.title": "{profileType}",
-    "meta.pluginTitle": "Test Find Profile Plugin",
+    "meta.pluginTitle": "Test Profilfinder-Plugin",
     "addProfile": "{profileType} hinzufügen",
     "pluggable.caption": "Profil auswählen",
     "pluggable.errors.plugin.disabled": "Kein Plugin verfügbar!",

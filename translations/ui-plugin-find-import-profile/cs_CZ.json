@@ -8,7 +8,7 @@
     "modal.footer.save": "Uložit",
     "modal.footer.close": "Close",
     "modal.footer.totalSelected": "Total selected: {count}",
-    "entities.jobProfiles": "Pracovní profily",
+    "entities.jobProfiles": "Profily úloh",
     "entities.matchProfiles": "Shoda profilů",
     "entities.actionProfiles": "Profily akcí",
     "entities.mappingProfiles": "Profily mapování polí",
@@ -19,5 +19,5 @@
     "confirmationModal.note": "<b>Všimněte si</b>, že {profileType} nebude znovu propojen, dokud neuložíte {parentType}.",
     "confirmationModal.ok": "OK",
     "confirmationModal.notAttached.heading": "Profil akce není připojen",
-    "confirmationModal.notAttached.body": "Před přiřazením profilu akce k profilu úlohy je nutné propojit profil mapování polí s profilem akce"
+    "confirmationModal.notAttached.body": "Před přiřazením profilu akce k profilu úlohy je nutné propojit profil mapování polí s profilem akce."
 }

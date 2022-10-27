@@ -1,5 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
+## [5.3.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.3.0) (2022-10-27)
+
+### Features added:
+* Update dependencies versions
+
 ## [5.2.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.2.0) (2022-07-08)
 
 ### Features added:

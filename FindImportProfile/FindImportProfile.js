@@ -18,6 +18,7 @@ import {
   ENTITY_KEYS,
   PROFILE_NAMES,
 } from '@folio/data-import/src/utils/constants';
+import { listTemplate } from '@folio/data-import/src/components/ListTemplate';
 
 import * as containers from './FindImportProfileContainer';
 import { fetchAssociations } from './utils/fetchAssociations';
@@ -50,6 +51,7 @@ const FindImportProfile = ({
   const [confirmationLabel, setConfirmationLabel] = useState(null);
   const [confirmationHeading, setConfirmationHeading] = useState(null);
   const [confirmationMessage, setConfirmationMessage] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleProfilesSelect = (associations, confirmationModalMessage, records, callback) => {
     setIsLinkingAllowed(true);
@@ -187,6 +189,13 @@ const FindImportProfile = ({
           >
             {viewProps => (
               <PluginFindRecordModal
+                onSearchChange={term => setSearchTerm(term)}
+                resultsFormatter={listTemplate({
+                  entityKey,
+                  searchTerm,
+                  selectRecord: null,
+                  selectedRecords: [],
+                })}
                 {...viewProps}
                 {...modalProps}
                 isMultiSelect={!isSingleSelect}
@@ -199,6 +208,7 @@ const FindImportProfile = ({
                   ...modalProps,
                 })}
                 closeModal={() => {
+                  setSearchTerm('');
                   modalProps.closeModal();
                   onClose();
                 }}

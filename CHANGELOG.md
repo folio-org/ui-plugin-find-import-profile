@@ -1,5 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
+## **5.4.0** (in progress)
+
+### Bugs fixed:
+* React-highlighter is incompatible with react 17 (UIPFIMP-52)
+
 ## [5.3.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.3.0) (2022-10-27)
 
 ### Features added:

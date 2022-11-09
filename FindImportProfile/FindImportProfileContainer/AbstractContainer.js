@@ -8,7 +8,6 @@ import {
 
 import { stripesShape } from '@folio/stripes/core';
 import { StripesConnectedSource } from '@folio/stripes/smart-components';
-import { listTemplate } from '@folio/data-import/src/components/ListTemplate';
 
 const idPrefix = 'uiPluginFindImportProfile-';
 
@@ -61,13 +60,6 @@ export class AbstractContainer extends Component {
       profileShape,
     } = props;
 
-    const resultsFormatter = listTemplate({
-      entityKey,
-      searchTerm: '',
-      selectRecord: null,
-      selectedRecords: [],
-    });
-
     if (this.source) {
       this.source.update(this.props);
     }
@@ -86,7 +78,6 @@ export class AbstractContainer extends Component {
       queryGetter: this.queryGetter,
       querySetter: this.querySetter,
       renderFilters: noop,
-      resultsFormatter,
       visibleColumns: get(profileShape, 'visibleColumns', []),
       sortableColumns: get(profileShape, 'visibleColumns', []),
       source: this.source,

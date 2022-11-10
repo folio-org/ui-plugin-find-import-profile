@@ -199,10 +199,13 @@ const FindImportProfile = ({
                 {...viewProps}
                 {...modalProps}
                 isMultiSelect={!isSingleSelect}
-                onSelectRow={(e, record) => checkProfilesAssociations([record], {
-                  ...viewProps,
-                  ...modalProps,
-                })}
+                onSelectRow={(e, record) => {
+                  checkProfilesAssociations([record], {
+                    ...viewProps,
+                    ...modalProps,
+                  });
+                  setSearchTerm('');
+                }}
                 onSaveMultiple={selectedRecords => checkProfilesAssociations(selectedRecords, {
                   ...viewProps,
                   ...modalProps,

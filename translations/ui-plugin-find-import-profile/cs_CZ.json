@@ -9,7 +9,7 @@
     "modal.footer.close": "Zavřít",
     "modal.footer.totalSelected": "Celkem vybráno: {count}",
     "entities.jobProfiles": "Profily úloh",
-    "entities.matchProfiles": "Shoda profilů",
+    "entities.matchProfiles": "Profily shody",
     "entities.actionProfiles": "Profily akcí",
     "entities.mappingProfiles": "Profily mapování polí",
     "confirmationModal.heading": "Propojit {profileType}?",

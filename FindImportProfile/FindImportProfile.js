@@ -17,8 +17,9 @@ import {
 import {
   ENTITY_KEYS,
   PROFILE_NAMES,
-} from '@folio/data-import/src/utils/constants';
-import { listTemplate } from '@folio/data-import/src/components/ListTemplate';
+  fieldsConfig,
+} from '@folio/data-import/src/utils';
+import { listTemplate } from '@folio/stripes-data-transfer-components';
 
 import * as containers from './FindImportProfileContainer';
 import { fetchAssociations } from './utils/fetchAssociations';
@@ -195,6 +196,7 @@ const FindImportProfile = ({
                   searchTerm,
                   selectRecord: null,
                   selectedRecords: [],
+                  fieldsConfig,
                 })}
                 {...viewProps}
                 {...modalProps}

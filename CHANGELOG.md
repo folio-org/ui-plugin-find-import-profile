@@ -2,9 +2,11 @@
 
 ## **5.4.0** (in progress)
 
+### Features added:
+* Change imports for ListTemplate component in ui-plugin-find-import-profile (UIPFIMP-53)
+
 ### Bugs fixed:
 * React-highlighter is incompatible with react 17 (UIPFIMP-52)
-* Change imports for ListTemplate component in ui-plugin-find-import-profile (UIPFIMP-53)
 
 ## [5.3.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.3.0) (2022-10-27)
 

@@ -1,9 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
-## **5.4.0** (in progress)
+## **6.0.0** (in progress)
 
 ### Features added:
 * Change imports for ListTemplate component in ui-plugin-find-import-profile (UIPFIMP-53)
+* Bump stripes to 8.0.0 for Orchid/2023-R1 (UIPFIMP-56)
 
 ### Bugs fixed:
 * React-highlighter is incompatible with react 17 (UIPFIMP-52)

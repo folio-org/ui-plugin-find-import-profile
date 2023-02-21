@@ -8,7 +8,7 @@
     "modal.footer.save": "Salvar",
     "modal.footer.close": "Fechar",
     "modal.footer.totalSelected": "Total selecionado: {count}",
-    "entities.jobProfiles": "Perfis de jobs",
+    "entities.jobProfiles": "Perfis de trabalhos",
     "entities.matchProfiles": "Perfis de correspondência",
     "entities.actionProfiles": "Perfis de ação",
     "entities.mappingProfiles": "Perfis de mapeamento de campo",

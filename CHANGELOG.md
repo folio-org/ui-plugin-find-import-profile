@@ -11,6 +11,8 @@
 * Change imports for ListTemplate component in ui-plugin-find-import-profile (UIPFIMP-53)
 * Bump stripes to 8.0.0 for Orchid/2023-R1 (UIPFIMP-56)
 
+## [5.3.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v5.3.1) (2022-11-17)
+
 ### Bugs fixed:
 * React-highlighter is incompatible with react 17 (UIPFIMP-52)
 

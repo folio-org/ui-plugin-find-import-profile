@@ -75,7 +75,7 @@
     "sinon": "^7.2.2"
   },
   "dependencies": {
-    "@folio/data-import": "^5.3.1",
+    "@folio/data-import": "^4.0.0",
     "@folio/stripes-acq-components": "~4.0.0",
     "@folio/stripes-data-transfer-components": "^5.4.0",
     "classnames": "^2.2.5",

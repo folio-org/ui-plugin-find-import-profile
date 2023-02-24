@@ -1,6 +1,6 @@
 # Change history for ui-plugin-find-import-profile
 
-## **6.0.0** (in progress)
+## [6.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v6.0.0) (2023-02-24)
 
 ### Features added:
 * Change imports for ListTemplate component in ui-plugin-find-import-profile (UIPFIMP-53)

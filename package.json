@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-import-profile",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Find and select Data Import Profiles plugin for Stripes",
   "repository": "folio-org/ui-plugin-find-import-profile",
   "publishConfig": {
@@ -75,7 +75,7 @@
     "sinon": "^7.2.2"
   },
   "dependencies": {
-    "@folio/data-import": "^4.0.0",
+    "@folio/data-import": "^6.0.0",
     "@folio/stripes-acq-components": "~4.0.0",
     "@folio/stripes-data-transfer-components": "^5.4.0",
     "classnames": "^2.2.5",

@@ -1,5 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
+## [6.0.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v6.0.1) (2023-02-24)
+
+### Bugs fixed:
+* Fix the version of the @folio/data-import dependency
+
 ## [6.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v6.0.0) (2023-02-24)
 
 ### Features added:

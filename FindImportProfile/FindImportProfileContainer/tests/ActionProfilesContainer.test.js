@@ -3,6 +3,10 @@ import {
   noop,
   get,
 } from 'lodash';
+import {
+  axe,
+  toHaveNoViolations,
+} from 'jest-axe';
 
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
@@ -16,6 +20,8 @@ import { actionProfilesShape } from '@folio/data-import/src/settings/ActionProfi
 import { translationsProperties } from '../../../test/jest/helpers';
 
 import ActionProfilesContainer from '../ActionProfilesContainer';
+
+expect.extend(toHaveNoViolations);
 
 const mockUpdate = jest.fn();
 const mockReplace = jest.fn();
@@ -55,6 +61,13 @@ describe('<ActionProfilesContainer>', () => {
     mockedChildren.mockClear();
     mockUpdate.mockClear();
     mockReplace.mockClear();
+  });
+
+  it('should be rendered with no axe errors', async () => {
+    const { container } = renderActionProfilesContainer();
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 
   it('renders children', () => {

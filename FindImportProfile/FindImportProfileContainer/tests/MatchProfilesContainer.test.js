@@ -3,6 +3,10 @@ import {
   noop,
   get,
 } from 'lodash';
+import {
+  axe,
+  toHaveNoViolations,
+} from 'jest-axe';
 
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
@@ -16,6 +20,8 @@ import { matchProfilesShape } from '@folio/data-import/src/settings/MatchProfile
 import { translationsProperties } from '../../../test/jest/helpers';
 
 import MatchProfilesContainer from '../MatchProfilesContainer';
+
+expect.extend(toHaveNoViolations);
 
 const stripesProp = buildStripes();
 const resourcesProp = buildResources({ resourceName: 'matchProfiles' });
@@ -45,6 +51,13 @@ const renderMatchProfilesContainer = () => {
 describe('<MatchProfilesContainer>', () => {
   afterEach(() => {
     mockedChildren.mockClear();
+  });
+
+  it('should be rendered with no axe errors', async () => {
+    const { container } = renderMatchProfilesContainer();
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 
   it('renders children', () => {

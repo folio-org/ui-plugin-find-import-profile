@@ -63,6 +63,7 @@
     "identity-obj-proxy": "^3.0.0",
     "inflected": "^2.0.4",
     "jest": "^26.1.0",
+    "jest-axe": "^7.0.0",
     "jest-junit": "^13.0.0",
     "miragejs": "^0.1.40",
     "mocha": "^9.0.0",

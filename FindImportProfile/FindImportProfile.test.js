@@ -3,7 +3,7 @@
 import React from 'react';
 import { act } from '@testing-library/react';
 import { noop } from 'lodash';
-import { axe } from 'jest-axe';
+import { runAxeTest } from '@folio/stripes-testing';
 
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
@@ -120,11 +120,10 @@ const renderFindImportProfile = ({
 };
 
 describe('FindImportProfile', () => {
-  it('should be rendered with no axe errors', async () => {
+  it('should render with no axe errors', async () => {
     const { container } = renderFindImportProfile(findImportProfileProps);
-    const results = await axe(container);
 
-    expect(results).toHaveNoViolations();
+    await runAxeTest({ rootNode: container });
   });
 
   it('should be rendered', () => {

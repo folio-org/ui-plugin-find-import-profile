@@ -3,10 +3,7 @@ import {
   noop,
   get,
 } from 'lodash';
-import {
-  axe,
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe } from 'jest-axe';
 
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
@@ -20,8 +17,6 @@ import { mappingProfilesShape } from '@folio/data-import/src/settings/MappingPro
 import { translationsProperties } from '../../../test/jest/helpers';
 
 import MappingProfilesContainer from '../MappingProfilesContainer';
-
-expect.extend(toHaveNoViolations);
 
 const stripesProp = buildStripes();
 const resourcesProp = buildResources({ resourceName: 'mappingProfiles' });

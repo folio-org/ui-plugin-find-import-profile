@@ -3,10 +3,7 @@ import {
   noop,
   get,
 } from 'lodash';
-import {
-  axe,
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe } from 'jest-axe';
 
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
@@ -20,8 +17,6 @@ import { actionProfilesShape } from '@folio/data-import/src/settings/ActionProfi
 import { translationsProperties } from '../../../test/jest/helpers';
 
 import ActionProfilesContainer from '../ActionProfilesContainer';
-
-expect.extend(toHaveNoViolations);
 
 const mockUpdate = jest.fn();
 const mockReplace = jest.fn();

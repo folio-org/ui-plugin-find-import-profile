@@ -3,10 +3,7 @@
 import React from 'react';
 import { act } from '@testing-library/react';
 import { noop } from 'lodash';
-import {
-  axe,
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe } from 'jest-axe';
 
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
@@ -19,8 +16,6 @@ import FindImportProfile from './FindImportProfile';
 import { fetchAssociations } from './utils/fetchAssociations';
 import { PluginFindRecordModal } from '@folio/stripes-acq-components';
 import { ConfirmationModal } from '@folio/stripes/components';
-
-expect.extend(toHaveNoViolations);
 
 const mockModalProps = {
   closeModal: () => {},

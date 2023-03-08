@@ -3,6 +3,7 @@ import {
   noop,
   get,
 } from 'lodash';
+import { runAxeTest } from '@folio/stripes-testing';
 
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
@@ -45,6 +46,12 @@ const renderJobProfilesContainer = () => {
 describe('<JobProfilesContainer>', () => {
   afterEach(() => {
     mockedChildren.mockClear();
+  });
+
+  it('should render with no axe errors', async () => {
+    const { container } = renderJobProfilesContainer();
+
+    await runAxeTest({ rootNode: container });
   });
 
   it('renders children', () => {

@@ -17,7 +17,7 @@
     "confirmationModal.single.body": "Este {profileType} ya está vinculado a <b> \" {linkedProfileName} \" </b> {linkedProfileType} . ¿Desea desvincularse del {linkedProfileType} y volver a vincular a este <b> \" {currentProfileName} \" </b> {linkedProfileType}",
     "confirmationModal.multiple.body": "Uno o más de estos {profileType}s ya están vinculados a otros {linkedProfileType}(s). ¿Desea desvincular del {linkedProfileType}(s) anterior y volver a vincular a este <b>{currentProfileName}</b> {linkedProfileType}?",
     "confirmationModal.note": "<b> NOTA </b> que {profileType} no se volverá a vincular hasta que guarde {parentType}",
-    "confirmationModal.ok": "OK",
-    "confirmationModal.notAttached.heading": "Action profile not attached",
-    "confirmationModal.notAttached.body": "You must link a field mapping profile to the action profile before assigning the action profile to a job profile"
+    "confirmationModal.ok": "DE ACUERDO",
+    "confirmationModal.notAttached.heading": "Perfil de acción no adjunto",
+    "confirmationModal.notAttached.body": "Debe vincular un perfil de asignación de campos al perfil de acción antes de asignar el perfil de acción a un perfil de trabajo"
 }

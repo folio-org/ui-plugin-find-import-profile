@@ -2,7 +2,7 @@
     "meta.title": "{profileType}",
     "meta.pluginTitle": "Test pluginu Najít profil",
     "addProfile": "Přidat {profileType}",
-    "pluggable.caption": "Vyberte Profil",
+    "pluggable.caption": "Vybrat Profil",
     "pluggable.errors.plugin.disabled": "Žádný plugin není k dispozici!",
     "modal.title": "Vyberte {profileType}",
     "modal.footer.save": "Uložit",

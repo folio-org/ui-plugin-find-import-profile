@@ -152,10 +152,11 @@ const FindImportProfile = ({
     const requests = records.map(record => fetchAssociations(okapi, record.id, masterType, parentType, entityKey));
 
     try {
-      const associations = await Promise.all(requests);
+      const attachedProfilesWithAssociations = await Promise.all(requests);
+      const associations = attachedProfilesWithAssociations.map(item => item.childSnapshotWrappers || []);
 
       if (profileType === ENTITY_KEYS.JOB_PROFILES && entityKey === ENTITY_KEYS.ACTION_PROFILES) {
-        handleAttachingToJobProfile(associations, records, onSaveMultiple);
+        handleAttachingToJobProfile(associations, attachedProfilesWithAssociations, onSaveMultiple);
       } else {
         const filteredAssociations = filterAssociations(flattenDeep(associations));
         const confirmationModalMessage = getMessage(filteredAssociations, isSingleSelected);
@@ -170,7 +171,7 @@ const FindImportProfile = ({
         setConfirmationHeading(confirmHeading);
         setConfirmationLabel(confirmLabel);
 
-        handleProfilesSelect(filteredAssociations, confirmationModalMessage, records, onSaveMultiple);
+        handleProfilesSelect(filteredAssociations, confirmationModalMessage, attachedProfilesWithAssociations, onSaveMultiple);
       }
     } catch (error) {
       console.error(error); // eslint-disable-line no-console

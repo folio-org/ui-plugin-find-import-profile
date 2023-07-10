@@ -153,7 +153,7 @@ const FindImportProfile = ({
 
     try {
       const attachedProfilesWithAssociations = await Promise.all(requests);
-      const associations = attachedProfilesWithAssociations.map(item => item.childSnapshotWrappers || []);
+      const associations = attachedProfilesWithAssociations.map(item => item?.childSnapshotWrappers || []);
 
       if (profileType === ENTITY_KEYS.JOB_PROFILES && entityKey === ENTITY_KEYS.ACTION_PROFILES) {
         handleAttachingToJobProfile(associations, attachedProfilesWithAssociations, onSaveMultiple);

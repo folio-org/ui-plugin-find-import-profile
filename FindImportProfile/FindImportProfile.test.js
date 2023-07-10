@@ -78,9 +78,15 @@ jest.mock('./FindImportProfileContainer', () => ({
     </>
   ),
 }));
-jest.mock('./utils/fetchAssociations', () => {
-  return { fetchAssociations: jest.fn(() => Promise.resolve({ contentType: 'ACTION_PROFILE' })) };
-});
+jest.mock('./utils/fetchAssociations', () => ({
+  fetchAssociations: jest.fn(() => Promise.resolve({
+    id: 'testActionProfileId',
+    content: { id: 'testActionProfileId' },
+    contentType: 'ACTION_PROFILE',
+    order: 0,
+    childSnapshotWrappers: [{ contentType: 'MAPPING_PROFILE' }],
+  })),
+}));
 
 const onClose = jest.fn();
 const findImportProfileProps = {
@@ -183,7 +189,10 @@ describe('FindImportProfile', () => {
     it('should check associations', async () => {
       await act(async () => {
         fetchAssociations.mockClear();
-        fetchAssociations.mockImplementationOnce(() => Promise.resolve({ contentType: 'ACTION_PROFILE' }));
+        fetchAssociations.mockImplementationOnce(() => Promise.resolve({
+          childSnapshotWrappers: [],
+          contentType: 'ACTION_PROFILE',
+        }));
 
         renderFindImportProfile(findImportProfileProps);
         await PluginFindRecordModal.mock.calls[0][0].onSelectRow(Event, {});

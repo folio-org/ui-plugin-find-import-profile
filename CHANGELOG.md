@@ -4,6 +4,7 @@
 
 ### Features added:
 * Add accessibiity testing to automated tests in UIPFIMP (UIPFIMP-57)
+* Update Node.js to v18 in GitHub Actions (UIPFIMP-60)
 
 ## [6.0.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v6.0.1) (2023-02-24)
 

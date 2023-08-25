@@ -1,4 +1,3 @@
-import { get } from 'lodash';
 import {
   createOkapiHeaders,
   createUrl,
@@ -25,7 +24,6 @@ export const fetchAssociations = async (okapi, profileId, masterType, parentType
     createUrl(baseUrl, { [queryProfileType]: ASSOCIATION_TYPES[entityKey] }, false),
     { headers: { ...createOkapiHeaders(okapi) } },
   );
-  const body = await response.json();
 
-  return get(body, 'childSnapshotWrappers', []);
+  return await response.json() || {};
 };

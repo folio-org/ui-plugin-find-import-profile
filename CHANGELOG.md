@@ -5,6 +5,7 @@
 ### Features added:
 * Add accessibiity testing to automated tests in UIPFIMP (UIPFIMP-57)
 * Return profile associations when linking the profile instead of the record itself (UIPFIMP-58)
+* Update Node.js to v18 in GitHub Actions (UIPFIMP-60)
 * *BREAKING* bump `react` to `v18`, and get rid of bigtest (UIPFIMP-59)
 
 ## [6.0.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v6.0.1) (2023-02-24)

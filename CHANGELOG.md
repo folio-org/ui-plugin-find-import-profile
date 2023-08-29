@@ -1,10 +1,11 @@
 # Change history for ui-plugin-find-import-profile
 
-## **6.1.0** (in progress)
+## **7.0.0** (in progress)
 
 ### Features added:
 * Add accessibiity testing to automated tests in UIPFIMP (UIPFIMP-57)
 * Return profile associations when linking the profile instead of the record itself (UIPFIMP-58)
+* *BREAKING* bump `react` to `v18`, and get rid of bigtest (UIPFIMP-59)
 
 ## [6.0.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v6.0.1) (2023-02-24)
 

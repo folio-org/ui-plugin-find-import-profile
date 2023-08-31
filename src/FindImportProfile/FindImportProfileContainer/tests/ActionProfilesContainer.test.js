@@ -7,14 +7,14 @@ import { runAxeTest } from '@folio/stripes-testing';
 
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
-import '../../../test/jest/__mock__';
+import '../../../../test/jest/__mock__';
 import {
   buildMutator,
   buildResources,
 } from '@folio/stripes-data-transfer-components/test/helpers';
 import { buildStripes } from '@folio/data-import/test/jest/helpers';
 import { actionProfilesShape } from '@folio/data-import/src/settings/ActionProfiles';
-import { translationsProperties } from '../../../test/jest/helpers';
+import { translationsProperties } from '../../../../test/jest/helpers';
 
 import ActionProfilesContainer from '../ActionProfilesContainer';
 

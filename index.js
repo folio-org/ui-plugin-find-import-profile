@@ -1,1 +1,1 @@
-export { default } from './FindImportProfile';
+export { default } from './src/FindImportProfile';

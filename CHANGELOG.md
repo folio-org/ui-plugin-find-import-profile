@@ -7,6 +7,7 @@
 * Return profile associations when linking the profile instead of the record itself (UIPFIMP-58)
 * Update Node.js to v18 in GitHub Actions (UIPFIMP-60)
 * *BREAKING* bump `react` to `v18`, and get rid of bigtest (UIPFIMP-59)
+* *BREAKING* bump `react-intl` to `v6.4.4` (UIPFIMP-61)
 
 ## [6.0.1](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v6.0.1) (2023-02-24)
 

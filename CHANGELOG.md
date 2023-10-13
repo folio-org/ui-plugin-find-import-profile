@@ -1,6 +1,6 @@
 # Change history for ui-plugin-find-import-profile
 
-## **7.0.0** (in progress)
+## [7.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v7.0.0) (2023-10-13)
 
 ### Features added:
 * Add accessibiity testing to automated tests in UIPFIMP (UIPFIMP-57)

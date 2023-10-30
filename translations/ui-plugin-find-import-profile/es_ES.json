@@ -17,7 +17,7 @@
     "confirmationModal.single.body": "Este {profileType} ya está vinculado a <b> \" {linkedProfileName} \" </b> {linkedProfileType} . ¿Desea desvincularse del {linkedProfileType} y volver a vincular a este <b> \" {currentProfileName} \" </b> {linkedProfileType}",
     "confirmationModal.multiple.body": "One or more of these {profileType}s is already linked to other {linkedProfileType}(s). Do you want to unlink from the previous {linkedProfileType}(s) and relink to this <b>{currentProfileName}</b> {linkedProfileType}?",
     "confirmationModal.note": "<b> NOTA </b> que {profileType} no se volverá a vincular hasta que guarde {parentType}",
-    "confirmationModal.ok": "OK",
+    "confirmationModal.ok": "Ok",
     "confirmationModal.notAttached.heading": "Action profile not attached",
     "confirmationModal.notAttached.body": "You must link a field mapping profile to the action profile before assigning the action profile to a job profile"
 }

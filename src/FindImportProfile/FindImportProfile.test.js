@@ -16,6 +16,7 @@ import FindImportProfile from './FindImportProfile';
 import { fetchAssociations } from './utils/fetchAssociations';
 import { PluginFindRecordModal } from '@folio/stripes-acq-components';
 import { ConfirmationModal } from '@folio/stripes/components';
+import { listTemplate } from '@folio/stripes-data-transfer-components';
 
 const mockModalProps = {
   closeModal: () => {},
@@ -58,6 +59,10 @@ jest.mock('@folio/stripes-acq-components', () => ({
   ),
   PluginFindRecordModal: jest.fn(() => 'PluginFindRecordModal'),
 }));
+jest.mock('@folio/stripes-data-transfer-components', () => ({
+  ...jest.requireActual('@folio/stripes-data-transfer-components'),
+  listTemplate: jest.fn(() => <span>listTemplate</span>),
+}));
 jest.mock('./FindImportProfileContainer', () => ({
   JobProfilesContainer: ({
     children,
@@ -84,7 +89,7 @@ jest.mock('./utils/fetchAssociations', () => ({
     content: { id: 'testActionProfileId' },
     contentType: 'ACTION_PROFILE',
     order: 0,
-    childSnapshotWrappers: [{ contentType: 'MAPPING_PROFILE' }],
+    childSnapshotWrappers: [{ contentType: 'ACTION_PROFILE' }],
   })),
 }));
 
@@ -126,6 +131,10 @@ const renderFindImportProfile = ({
 };
 
 describe('FindImportProfile', () => {
+  beforeEach(() => {
+    listTemplate.mockClear();
+  });
+
   it('should render with no axe errors', async () => {
     const { container } = renderFindImportProfile(findImportProfileProps);
 
@@ -146,6 +155,17 @@ describe('FindImportProfile', () => {
       });
 
       expect(onClose).toHaveBeenCalled();
+    });
+  });
+
+  describe('when search by a term', () => {
+    it('should call a proper handler to render new records', async () => {
+      await act(async () => {
+        renderFindImportProfile(findImportProfileProps);
+        PluginFindRecordModal.mock.calls[0][0].onSearchChange('test term');
+      });
+
+      expect(listTemplate).toHaveBeenCalled();
     });
   });
 

@@ -8,8 +8,10 @@ import { runAxeTest } from '@folio/stripes-testing';
 import { renderWithIntl } from '@folio/stripes-data-transfer-components/test/jest/helpers';
 
 import '../../test/jest/__mock__';
-import { buildStripes } from '../../test/jest/helpers';
-import { translationsProperties } from '../../test/jest/helpers';
+import {
+  buildStripes,
+  translationsProperties,
+} from '../../test/jest/helpers';
 
 import FindImportProfile from './FindImportProfile';
 

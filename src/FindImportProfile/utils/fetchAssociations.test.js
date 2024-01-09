@@ -1,5 +1,3 @@
-import faker from 'faker';
-
 import '../../../test/jest/__mock__';
 
 import { fetchAssociations } from './fetchAssociations';
@@ -7,7 +5,7 @@ import { fetchAssociations } from './fetchAssociations';
 global.fetch = jest.fn();
 
 const mockData = { name: 'test name' };
-const profileId = faker.random.uuid();
+const profileId = 'testProfileId';
 const okapi = {
   url: 'https://test.com',
   tenant: 'tenant',

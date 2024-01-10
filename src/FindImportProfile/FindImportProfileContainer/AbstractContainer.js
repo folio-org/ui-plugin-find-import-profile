@@ -51,14 +51,14 @@ export class AbstractContainer extends Component {
     return get(this.props.resources, 'query', {});
   };
 
-  render(props) {
+  render() {
     const {
       stripes,
       resources,
       children,
       entityKey,
       profileShape,
-    } = props;
+    } = this.props;
 
     if (this.source) {
       this.source.update(this.props);
@@ -92,4 +92,9 @@ AbstractContainer.propTypes = {
   mutator: PropTypes.object.isRequired,
   resources: PropTypes.object.isRequired,
   profileShape: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.node,
+  ]).isRequired,
+  entityKey: PropTypes.string,
 };

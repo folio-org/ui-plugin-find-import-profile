@@ -6,6 +6,7 @@
 
 * Jest/RTL: Increase test coverage for FindImportProfile component (UIPFIMP-65)
 * Jest/RTL: Cover utils with unit tests (UIPFIMP-64)
+* Jest/RTL: Increase test coverage for AbstractContainer component (UIPFIMP-66)
 
 ## [7.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v7.0.0) (2023-10-13)
 

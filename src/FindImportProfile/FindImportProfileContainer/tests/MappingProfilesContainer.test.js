@@ -12,9 +12,11 @@ import {
   buildMutator,
   buildResources,
 } from '@folio/stripes-data-transfer-components/test/helpers';
-import { buildStripes } from '../../../../test/jest/helpers';
 import { mappingProfilesShape } from '@folio/data-import/src/settings/MappingProfiles';
-import { translationsProperties } from '../../../../test/jest/helpers';
+import {
+  buildStripes,
+  translationsProperties,
+} from '../../../../test/jest/helpers';
 
 import MappingProfilesContainer from '../MappingProfilesContainer';
 

@@ -1,6 +1,6 @@
 # Change history for ui-plugin-find-import-profile
 
-## **7.1.0** (in progress)
+## [7.1.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v7.1.0) (2024-03-22)
 
 ### Features added:
 
@@ -8,6 +8,7 @@
 * Jest/RTL: Cover utils with unit tests (UIPFIMP-64)
 * Jest/RTL: Increase test coverage for AbstractContainer component (UIPFIMP-66)
 * Clean up eslint errors (UIPFIMP-68)
+* Bumped folio dependencies and interfaces dependency
 
 ## [7.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v7.0.0) (2023-10-13)
 

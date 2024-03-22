@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-import-profile",
-  "version": "7.0.0",
+  "version": "7.1.0",
   "description": "Find and select Data Import Profiles plugin for Stripes",
   "repository": "folio-org/ui-plugin-find-import-profile",
   "publishConfig": {
@@ -18,9 +18,9 @@
       "@folio/stripes-data-transfer-components"
     ],
     "okapiInterfaces": {
-      "data-import": "3.0",
-      "source-manager-job-executions": "3.0",
-      "data-import-converter-storage": "1.2"
+      "data-import": "3.1",
+      "source-manager-job-executions": "3.3",
+      "data-import-converter-storage": "1.4"
     }
   },
   "scripts": {
@@ -66,9 +66,9 @@
     "react-router-dom": "^5.2.0"
   },
   "dependencies": {
-    "@folio/data-import": "^7.0.0",
-    "@folio/stripes-acq-components": "^5.0.0",
-    "@folio/stripes-data-transfer-components": "^6.0.0",
+    "@folio/data-import": "^7.1.0",
+    "@folio/stripes-acq-components": "~5.1.0",
+    "@folio/stripes-data-transfer-components": "^6.1.0",
     "classnames": "^2.2.5",
     "lodash": "^4.16.4",
     "prop-types": "^15.6.0",

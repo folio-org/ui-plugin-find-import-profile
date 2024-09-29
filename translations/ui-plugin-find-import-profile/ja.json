@@ -3,7 +3,7 @@
     "meta.pluginTitle": "Test Find Profile Plugin",
     "addProfile": "{profileType}を追加",
     "pluggable.caption": "Pick Profile",
-    "pluggable.errors.plugin.disabled": "No plugin available!",
+    "pluggable.errors.plugin.disabled": "利用できるプラグインがありません",
     "modal.title": "{profileType}を選択",
     "modal.footer.save": "保存",
     "modal.footer.close": "閉じる",

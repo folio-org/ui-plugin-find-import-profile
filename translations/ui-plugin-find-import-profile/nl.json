@@ -1,0 +1,23 @@
+{
+    "meta.title": "{profileType}",
+    "meta.pluginTitle": "Test 'Profiel zoeken' plugin",
+    "addProfile": "Toevoegen {profileType}",
+    "pluggable.caption": "Profiel kiezen",
+    "pluggable.errors.plugin.disabled": "Geen plugin beschikbaar!",
+    "modal.title": "Selecteer {profileType}",
+    "modal.footer.save": "Opslaan",
+    "modal.footer.close": "Sluiten",
+    "modal.footer.totalSelected": "Totaal geselecteerd: {count}",
+    "entities.jobProfiles": "Taakprofielen",
+    "entities.matchProfiles": "Matchprofielen",
+    "entities.actionProfiles": "Actieprofielen",
+    "entities.mappingProfiles": "Koppelprofielen",
+    "confirmationModal.heading": "{profileType} opnieuw koppelen?",
+    "confirmationModal.label": "Opnieuw koppelen",
+    "confirmationModal.single.body": "Dit {profileType} is al gekoppeld aan <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Wilt u ontkoppelen van het vorige {linkedProfileType} en opnieuw koppelen aan dit <b>{currentProfileName}</b> {linkedProfileType}?",
+    "confirmationModal.multiple.body": "Een of meer van deze {profileType}(s) is al gekoppeld aan andere {linkedProfileType}(en). Wilt u ontkoppelen van de vorige {linkedProfileType}(s) en opnieuw koppelen aan deze <b>{currentProfileName}</b> {linkedProfileType}?",
+    "confirmationModal.note": "<b>LET OP:</b> de {profileType}(s) worden niet opnieuw gekoppeld totdat u het {parentType} opslaat.",
+    "confirmationModal.ok": "OK",
+    "confirmationModal.notAttached.heading": "Actieprofiel niet gekoppeld",
+    "confirmationModal.notAttached.body": "U moet een koppelprofiel aan het actieprofiel koppelen voordat u het actieprofiel aan een taakprofiel toewijst."
+}

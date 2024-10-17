@@ -1,6 +1,6 @@
 # Change history for ui-plugin-find-import-profile
 
-## **7.2.0** (in progress)
+## **8.0.0** (in progress)
 
 ### Features added:
 * Bump `stripes` to `v9.2.0` for Ramsons release (UIPFIMP-65)

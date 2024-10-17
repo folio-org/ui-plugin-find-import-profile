@@ -3,7 +3,7 @@
 ## **8.0.0** (in progress)
 
 ### Features added:
-* Bump `stripes` to `v9.2.0` for Ramsons release (UIPFIMP-65)
+* *BREAKING* Bump `stripes` to `v9.2.0` for Ramsons release (UIPFIMP-65)
 
 ## [7.1.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v7.1.0) (2024-03-22)
 

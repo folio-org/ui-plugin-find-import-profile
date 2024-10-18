@@ -1,10 +1,10 @@
 {
     "meta.title": "{profileType}",
     "meta.pluginTitle": "Probar el plugin de perfil de búsqueda",
-    "addProfile": "Añadir {profileType}",
+    "addProfile": "Adicionar {profileType}",
     "pluggable.caption": "Seleccionar perfil",
     "pluggable.errors.plugin.disabled": "No hay plugin disponible!",
-    "modal.title": "Seleccione {profileType}",
+    "modal.title": "Seleccionar {profileType}",
     "modal.footer.save": "Guardar",
     "modal.footer.close": "Cerrar",
     "modal.footer.totalSelected": "Total seleccionado: {count}",
@@ -15,9 +15,9 @@
     "confirmationModal.heading": "Volver a vincular {profileType} ?",
     "confirmationModal.label": "Volver a vincular",
     "confirmationModal.single.body": "Este {profileType} ya está vinculado a <b> \" {linkedProfileName} \" </b> {linkedProfileType} . ¿Desea desvincularse del {linkedProfileType} y volver a vincular a este <b> \" {currentProfileName} \" </b> {linkedProfileType}",
-    "confirmationModal.multiple.body": "One or more of these {profileType}s is already linked to other {linkedProfileType}(s). Do you want to unlink from the previous {linkedProfileType}(s) and relink to this <b>{currentProfileName}</b> {linkedProfileType}?",
+    "confirmationModal.multiple.body": "Uno o más de estos {profileType}s ya están vinculados a otros {linkedProfileType}(s). ¿Desea desvincular del {linkedProfileType}(s) anterior y volver a vincular a este <b>{currentProfileName}</b> {linkedProfileType}?",
     "confirmationModal.note": "<b> NOTA </b> que {profileType} no se volverá a vincular hasta que guarde {parentType}",
-    "confirmationModal.ok": "Ok",
-    "confirmationModal.notAttached.heading": "Action profile not attached",
-    "confirmationModal.notAttached.body": "You must link a field mapping profile to the action profile before assigning the action profile to a job profile"
+    "confirmationModal.ok": "DE ACUERDO",
+    "confirmationModal.notAttached.heading": "Perfil de acción no adjunto",
+    "confirmationModal.notAttached.body": "Debe vincular un perfil de asignación de campos al perfil de acción antes de asignar el perfil de acción a un perfil de trabajo"
 }

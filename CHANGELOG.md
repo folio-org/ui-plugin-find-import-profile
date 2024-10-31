@@ -1,9 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
-## **8.0.0** (in progress)
+## [8.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v8.0.0) (2024-10-31)
 
 ### Features added:
-* *BREAKING* Bump `stripes` to `v9.2.0` for Ramsons release (UIPFIMP-65)
+* *BREAKING* Bump `stripes` to `v9.2.2` for Ramsons release (UIPFIMP-73)
+* Bumped `okapiInterfaces` versions
 
 ## [7.1.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v7.1.0) (2024-03-22)
 

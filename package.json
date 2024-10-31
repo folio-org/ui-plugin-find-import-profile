@@ -18,15 +18,14 @@
       "@folio/stripes-data-transfer-components"
     ],
     "okapiInterfaces": {
-      "data-import": "3.1",
-      "source-manager-job-executions": "3.3",
-      "data-import-converter-storage": "1.4"
+      "data-import": "3.2",
+      "source-manager-job-executions": "3.4",
+      "data-import-converter-storage": "1.5"
     }
   },
   "scripts": {
     "lint": "eslint .",
     "test:unit": "jest --ci --coverage",
-    "test:e2e": "stripes test karma --karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage",
     "test": "yarn run test:unit",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
     "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-plugin-find-import-profile ./translations/ui-plugin-find-import-profile/compiled"
@@ -39,9 +38,9 @@
     "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@folio/eslint-config-stripes": "^7.0.0",
-    "@folio/stripes": "^9.2.0",
+    "@folio/stripes": "^9.2.2",
     "@folio/stripes-cli": "^3.2.0",
-    "@folio/stripes-testing": "^4.5.0",
+    "@folio/stripes-testing": "^4.7.0",
     "@formatjs/cli": "^6.1.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^14.0.0",
@@ -66,16 +65,16 @@
     "react-router-dom": "^5.2.0"
   },
   "dependencies": {
-    "@folio/data-import": "^7.1.0",
-    "@folio/stripes-acq-components": "~5.1.0",
-    "@folio/stripes-data-transfer-components": "^6.1.0",
+    "@folio/data-import": "^8.0.0",
+    "@folio/stripes-acq-components": "~6.0.0",
+    "@folio/stripes-data-transfer-components": "^6.2.0",
     "classnames": "^2.2.5",
     "lodash": "^4.16.4",
     "prop-types": "^15.6.0",
     "redux-form": "^8.3.7"
   },
   "peerDependencies": {
-    "@folio/stripes": "^9.2.0",
+    "@folio/stripes": "^9.2.2",
     "react": "^18.2.0",
     "react-intl": "^6.4.4",
     "react-router": "^5.2.0",

@@ -31,6 +31,14 @@ const profileContainers = {
   [ENTITY_KEYS.MAPPING_PROFILES]: containers.MappingProfilesContainer,
 };
 
+const defaultPluginProps = {
+  disabled: false,
+  marginBottom0: true,
+  marginTop0: true,
+  searchButtonStyle: 'primary',
+  searchLabel: <FormattedMessage id="ui-plugin-find-import-profile.addProfile" />,
+};
+
 const FindImportProfile = ({
   entityKey,
   parentType,
@@ -38,10 +46,10 @@ const FindImportProfile = ({
   profileType,
   profileName,
   onLink,
-  onClose,
-  isSingleSelect,
-  isMultiLink,
   filterParams,
+  onClose = noop,
+  isSingleSelect = false,
+  isMultiLink = true,
   ...rest
 }) => {
   const FindImportProfileContainer = profileContainers[entityKey];
@@ -180,6 +188,7 @@ const FindImportProfile = ({
 
   return (
     <PluginFindRecord
+      {...defaultPluginProps}
       {...rest}
       selectRecordsCb={onLink}
     >
@@ -262,17 +271,6 @@ FindImportProfile.propTypes = {
   onLink: PropTypes.func.isRequired,
   onSaveMultiple: PropTypes.func,
   onClose: PropTypes.func,
-};
-
-FindImportProfile.defaultProps = {
-  disabled: false,
-  marginBottom0: true,
-  marginTop0: true,
-  searchButtonStyle: 'primary',
-  searchLabel: <FormattedMessage id="ui-plugin-find-import-profile.addProfile" />,
-  isSingleSelect: false,
-  isMultiLink: true,
-  onClose: noop,
 };
 
 export default FindImportProfile;

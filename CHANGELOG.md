@@ -1,5 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
+## [8.1.0] In progress
+
+### Features added:
+* `React v19`: refactor away from default props for functional components (UIPFIMP-71)
+
 ## [8.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v8.0.0) (2024-10-31)
 
 ### Features added:

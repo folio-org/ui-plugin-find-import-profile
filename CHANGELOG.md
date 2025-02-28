@@ -4,6 +4,7 @@
 
 ### Features added:
 * `React v19`: refactor away from default props for functional components (UIPFIMP-71)
+* CI: migrate to shared GA workflows (UIPFIMP-75)
 * *BREAKING* Migrate stripes dependencies to their Sunflower versions. (UIPFIMP-76)
 * *BREAKING* Migrate `react-intl` to v7. (UIPFIMP-77)
 

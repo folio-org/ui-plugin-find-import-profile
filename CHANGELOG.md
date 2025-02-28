@@ -1,10 +1,12 @@
 # Change history for ui-plugin-find-import-profile
 
-## [8.1.0] In progress
+## [9.0.0] In progress
 
 ### Features added:
 * `React v19`: refactor away from default props for functional components (UIPFIMP-71)
 * CI: migrate to shared GA workflows (UIPFIMP-75)
+* *BREAKING* Migrate stripes dependencies to their Sunflower versions. (UIPFIMP-76)
+* *BREAKING* Migrate `react-intl` to v7. (UIPFIMP-77)
 
 ## [8.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v8.0.0) (2024-10-31)
 

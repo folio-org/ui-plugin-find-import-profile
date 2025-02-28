@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-import-profile",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "description": "Find and select Data Import Profiles plugin for Stripes",
   "repository": "folio-org/ui-plugin-find-import-profile",
   "publishConfig": {
@@ -28,7 +28,7 @@
     "test:unit": "jest --ci --coverage",
     "test": "yarn run test:unit",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
-    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-plugin-find-import-profile ./translations/ui-plugin-find-import-profile/compiled"
+    "formatjs-compile": "stripes translate compile"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
@@ -37,11 +37,11 @@
     "@babel/plugin-transform-class-properties": "^7.22.5",
     "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
-    "@folio/eslint-config-stripes": "^7.0.0",
-    "@folio/stripes": "^9.2.2",
-    "@folio/stripes-cli": "^3.2.0",
-    "@folio/stripes-testing": "^4.7.0",
-    "@formatjs/cli": "^6.1.3",
+    "@folio/eslint-config-stripes": "^8.0.0",
+    "@folio/stripes": "^10.0.0",
+    "@folio/stripes-cli": "^4.0.0",
+    "@folio/stripes-testing": "^5.0.0",
+    "@formatjs/cli": "^6.6.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^14.0.0",
     "babel-jest": "^29.6.3",
@@ -60,23 +60,23 @@
     "query-string": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intl": "^6.4.4",
+    "react-intl": "^7.1.5",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
   "dependencies": {
-    "@folio/data-import": "^8.0.0",
-    "@folio/stripes-acq-components": "~6.0.0",
-    "@folio/stripes-data-transfer-components": "^6.2.0",
+    "@folio/data-import": "^9.0.0",
+    "@folio/stripes-acq-components": "^7.0.0",
+    "@folio/stripes-data-transfer-components": "^7.0.0",
     "classnames": "^2.2.5",
     "lodash": "^4.16.4",
     "prop-types": "^15.6.0",
     "redux-form": "^8.3.7"
   },
   "peerDependencies": {
-    "@folio/stripes": "^9.2.2",
+    "@folio/stripes": "^10.0.0",
     "react": "^18.2.0",
-    "react-intl": "^6.4.4",
+    "react-intl": "^7.1.5",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   }

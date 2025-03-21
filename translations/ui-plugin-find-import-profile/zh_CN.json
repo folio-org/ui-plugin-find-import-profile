@@ -7,7 +7,7 @@
     "modal.title": "选择{profileType}",
     "modal.footer.save": "保存",
     "modal.footer.close": "关闭",
-    "modal.footer.totalSelected": "已选总数： {count}",
+    "modal.footer.totalSelected": "已选总数 :  {count}",
     "entities.jobProfiles": "任务配置文件",
     "entities.matchProfiles": "匹配配置文件",
     "entities.actionProfiles": "操作配置文件",

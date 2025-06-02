@@ -50,6 +50,7 @@ const FindImportProfile = ({
   onClose = noop,
   isSingleSelect = false,
   isMultiLink = true,
+  filterByRecordType = '',
   ...rest
 }) => {
   const FindImportProfileContainer = profileContainers[entityKey];
@@ -197,6 +198,7 @@ const FindImportProfile = ({
           <FindImportProfileContainer
             entityKey={entityKey}
             filterParams={filterParams}
+            filterByRecordType={filterByRecordType}
           >
             {viewProps => (
               <PluginFindRecordModal
@@ -271,6 +273,7 @@ FindImportProfile.propTypes = {
   onLink: PropTypes.func.isRequired,
   onSaveMultiple: PropTypes.func,
   onClose: PropTypes.func,
+  filterByRecordType: PropTypes.string,
 };
 
 export default FindImportProfile;

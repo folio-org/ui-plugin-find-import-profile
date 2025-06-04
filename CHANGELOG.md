@@ -1,5 +1,10 @@
 # Change history for ui-plugin-find-import-profile
 
+## [9.1.0] (IN PROGRESS)
+
+### Features added:
+* Introduce filterByRecordType prop to build query for filtered entities. (UIPFIMP-79)
+
 ## [9.0.0](https://github.com/folio-org/ui-plugin-find-import-profile/tree/v9.0.0) (2025-03-13)
 
 ### Features added:

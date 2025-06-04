@@ -21,7 +21,10 @@ export class AbstractContainer extends Component {
 
   componentDidMount() {
     this.source = new StripesConnectedSource(this.props, this.logger);
-    this.props.mutator.query.update({ sort: 'name' });
+    this.props.mutator.query.update({
+      sort: 'name',
+      filterByRecordType: this.props.filterByRecordType,
+    });
   }
 
   componentDidUpdate() {
@@ -97,4 +100,5 @@ AbstractContainer.propTypes = {
     PropTypes.node,
   ]).isRequired,
   entityKey: PropTypes.string,
+  filterByRecordType: PropTypes.string,
 };

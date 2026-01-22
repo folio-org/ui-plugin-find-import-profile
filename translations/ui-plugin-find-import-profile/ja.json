@@ -14,7 +14,7 @@
     "entities.mappingProfiles": "フィールド・マッピング・プロファイル",
     "confirmationModal.heading": "Relink {profileType}?",
     "confirmationModal.label": "Relink",
-    "confirmationModal.single.body": "This {profileType} is already linked to <b>\"{linkedProfileName}\"</b> {linkedProfileType}. Do you want to unlink from the previous {linkedProfileType} and relink to this <b>{currentProfileName}</b> {linkedProfileType}?",
+    "confirmationModal.single.body": "この {profileType} はすでに <b>「{linkedProfileName}」</b> {linkedProfileType} にリンクされています。\n以前の {linkedProfileType} とのリンクを解除し、この <b>{currentProfileName}</b> {linkedProfileType} に再リンクしますか？",
     "confirmationModal.multiple.body": "これらの{profileType}のうち1つ以上は既に他の{linkedProfileType}(s)にリンクされています。以前の {linkedProfileType}(s) からリンクを解除して、この<b>{currentProfileName}</b>{linkedProfileType} に再リンクしますか？",
     "confirmationModal.note": "<b>NOTE</b> that the {profileType}(s) will not be relinked until you save the {parentType}.",
     "confirmationModal.ok": "OK",
